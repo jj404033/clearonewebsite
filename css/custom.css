@@ -1,0 +1,8 @@
+@media (max-width: 767px) { /* Adjusts styles for screens smaller than 768px */
+    .about-box12 {
+        margin-bottom: 20px; /* Reduces bottom margin of the description box */
+    }
+    .about-box22 {
+        margin-top: 0; /* Removes top margin of the 'Developed by' box */
+    }
+}

@@ -734,7 +734,6 @@ padding: 5px 0;
   }
 
 
-
 .about .about-box::after {
   position: absolute;
   content: "";
@@ -839,5 +838,86 @@ border-radius: 30px;
 }
 .padding_rl {padding: 0;}
 
+
+.about .about-box,
+.about .about-box2 {
+    margin-bottom: 10px; /* reduced margin */
+    padding: 10px 0; /* reduced padding */
+}
+
+.about .about-box2 p {
+    line-height: 1.6; /* normalized line height */
+    margin-bottom: 0; /* remove any default margins */
+}
+
+.about .about-box_img {
+    margin-bottom: 0; /* remove any default margins */
+}
+
+/* Ensure the 'View Project' button is snug against the image or text above it */
+.about .about-box a {
+    margin-top: 0; /* remove any default top margin */
+}
+
+/* Adjustments for mobile views */
+@media (max-width: 767px) {
+    .about .about-box,
+    .about .about-box2,
+    .about .about-box_img {
+        padding: 5px 0; /* further reduced padding for mobile */
+        margin-bottom: 5px; /* further reduced margin for mobile */
+    }
+    
+    /* If the button is still too far from the content above, reduce its top margin */
+    .about .about-box a {
+        margin-top: -5px; /* pull the button upwards if necessary */
+    }
+}
+/* Hide spacers on screens smaller than 768px */
+@media (max-width: 767px) {
+  .spacer {
+      display: none;
+  }
+}
+
+/* Show spacers on screens larger than or equal to 768px */
+@media (min-width: 768px) {
+  .spacer {
+      display: block;
+  }
+}
+.map-responsive {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+}
+
+.map-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+@media (max-width: 767px) {
+  .heading_container h2 {
+    text-align: center !important; /* Force center alignment on mobile */
+    margin-left: 0 !important; /* Override any existing left margin */
+  }
+}
+.no-background-no-outline2 {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important; /* In case there's a shadow */
+}
+
+/* OR, if you want to target only the anchor inside a specific div */
+#about .about-box2 a {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important; /* In case there's a shadow */
+}
   /* end footer section*/
   /*# sourceMappingURL=style.css.map */
