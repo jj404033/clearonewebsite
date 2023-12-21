@@ -1,0 +1,45 @@
+/* Existing style for body, h3, p etc. */
+
+.photo-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.gallery-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background: #fff; /* Assuming white background for the content box */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Shadow for the boxes */
+}
+
+.gallery-item:nth-child(odd) {
+    flex-direction: row;
+    justify-content: space-between;
+    background: #ff0000; /* Assuming red background for the content box */
+}
+
+.gallery-item:nth-child(even) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    background: #fff; /* White background */
+}
+
+.gallery-item img {
+    width: 50%; /* Adjust as necessary */
+    height: auto;
+    margin: 20px; /* Spacing around the image */
+}
+
+.text-content {
+    padding: 15px;
+    width: 50%; /* Adjust as necessary */
+    color: #fff; /* Text color for the red background */
+}
+
+.text-content h3 {
+    color: inherit; /* This will take the color from the parent, which is set above */
+}
+
+/* Add your existing media queries here */
