@@ -216,6 +216,7 @@ body {
   }
   
   .slider_section .img-box img {
+    margin-top: 150px;
     width: 100%;
   }
   
@@ -414,75 +415,7 @@ body {
     margin-top: 10px;
   }
   
-  .work_section .work_container .box.b-1, .work_section .work_container .box.b-3 {
-    -webkit-animation: odd-box-animate 2s infinite;
-            animation: odd-box-animate 2s infinite;
-  }
-  
-  .work_section .work_container .box.b-2, .work_section .work_container .box.b-4 {
-    -webkit-animation: even-box-animate 2s infinite;
-            animation: even-box-animate 2s infinite;
-  }
-  
-  @-webkit-keyframes odd-box-animate {
-    0% {
-      -webkit-transform: translateY(45px);
-              transform: translateY(45px);
-    }
-    50% {
-      -webkit-transform: translateY(-45px);
-              transform: translateY(-45px);
-    }
-    100% {
-      -webkit-transform: translateY(45px);
-              transform: translateY(45px);
-    }
-  }
-  
-  @keyframes odd-box-animate {
-    0% {
-      -webkit-transform: translateY(45px);
-              transform: translateY(45px);
-    }
-    50% {
-      -webkit-transform: translateY(-45px);
-              transform: translateY(-45px);
-    }
-    100% {
-      -webkit-transform: translateY(45px);
-              transform: translateY(45px);
-    }
-  }
-  
-  @-webkit-keyframes even-box-animate {
-    0% {
-      -webkit-transform: translateY(-45px);
-              transform: translateY(-45px);
-    }
-    50% {
-      -webkit-transform: translateY(45px);
-              transform: translateY(45px);
-    }
-    100% {
-      -webkit-transform: translateY(-45px);
-              transform: translateY(-45px);
-    }
-  }
-  
-  @keyframes even-box-animate {
-    0% {
-      -webkit-transform: translateY(-45px);
-              transform: translateY(-45px);
-    }
-    50% {
-      -webkit-transform: translateY(45px);
-              transform: translateY(45px);
-    }
-    100% {
-      -webkit-transform: translateY(-45px);
-              transform: translateY(-45px);
-    }
-  }
+
   
   .work_section .btn-box a {
     color: #ffffff;
@@ -858,9 +791,22 @@ border-radius: 30px;
 .about .about-box a {
     margin-top: 0; /* remove any default top margin */
 }
+/* CSS to hide the spaces on mobile devices */
+@media only screen and (max-width: 768px) {
+  .custom_heading-container h3 > p {
+      display: none; /* This will hide the <p> elements on mobile */
+  }
+}
+
+/* Your existing styles for larger screens */
+.custom_heading-container h3 > p {
+  /* Your existing styles for spacing if any */
+}
+
 
 /* Adjustments for mobile views */
 @media (max-width: 767px) {
+  
     .about .about-box,
     .about .about-box2,
     .about .about-box_img {
