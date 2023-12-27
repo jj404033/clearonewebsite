@@ -306,6 +306,7 @@ body {
   
   .service_section .box.b-2 .detail-box {
     width: 90%;
+    margin-left: auto;
     text-align: middle;
     overflow: visible;
   }
@@ -322,13 +323,13 @@ body {
   .service_section .box.b-3 .detail-box {
     width: 90%;
     margin-left: auto;
-    overflow: hidden;
+    overflow: visible;
     text-align: middle;
   }
   
   .service_section .box.b-3 .detail-box p {
     height: 52px;
-    overflow: hidden;
+    overflow: visible;
   }
   
   .service_section .box.b-3 .detail-box a {
