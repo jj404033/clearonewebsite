@@ -12,7 +12,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>Hagey Harmony Homes</title>
+    <title>Medicine Tracker</title>
     <link rel="icon" type="image/png" href="images/clearonelogo.png" >
 
     <!-- slider stylesheet -->
@@ -66,7 +66,7 @@
     display: flex; /* Use flexbox to center content vertically */
     align-items: center; /* Aligns content vertically */
     justify-content: center; /* Aligns content horizontally */
-    text-align: center; /* Ensures text is centered within the text-content */
+    text-align: left; /* Ensures text is centered within the text-content */
 }
 
 /* You may also want to add some padding inside the text-content for better spacing */
@@ -244,34 +244,37 @@
         <!-- time to code zigzag -->
         <div class="photo-gallery">
             <div class="gallery-item">
-                <img src="images/pneumatictank.png" alt="floorplan">
+                <img src="images/medicinehome.jpg" alt="floorplan">
                 <div class="text-content">
-                    <h3>Abstract</h3> <!-- The title at the top -->
+                    <h3>Introduction</h3> <!-- The title at the top -->
                     <!-- Other elements like images or icons can go here if needed -->
-                    <p  style="color: #ffffff;">This study investigates the creation of a custom pneumatic tank for a VEX Robotics “Over and Under” competition robot, with a focus on using Acrylonitrile Butadiene Styrene (ABS) for its durability in high-pressure situations. Recognizing the limitations of standard tanks in space-restricted settings, the research details the design and fabrication processes that leverage advanced modeling to ensure the tank's fit within the robot's compact build. Testing across various pressures confirms that the tailored ABS tank not only meets spatial requirements but also outperforms traditional tanks in durability and efficiency. The findings emphasize the importance of targeted material choice and custom design in producing pneumatic components for robots where space is at a premium, without sacrificing performance.</p> <!-- The description at the bottom -->
+                    <p  style="color: #ffffff;">
+                        A medication alert software, inspired by the practical needs of a pharmacist, has been developed as a Python-based application to assist individuals in adhering to their medication schedules. The core functionality of this software lies in its user-friendly interface, where users can conveniently input the specific times at which their medications need to be taken. Upon reaching these pre-set times, the software generates audible alerts to remind users of their medication. A key feature of this alert system is the inclusion of a dismiss button, which not only silences the alarm but also serves as an acknowledgment of the medication intake, ensuring accurate tracking. This software is particularly beneficial for those with complex medication regimens, enhancing adherence and promoting better health outcomes. Its development stems from an understanding of the challenges faced in medication management, aiming to provide a reliable and straightforward solution for users.</p> <!-- The description at the bottom -->
                 </div>
             </div>
             <div class="gallery-item right">
-                <img src="images/problemm.png" alt="Fishing">
+                <img src="images/timeadjust.jpg" alt="Fishing">
                 <div class="text-content">
-                    <h3>Problem</h3> <!-- The title at the top -->
+                    <h3>Time Delta Function</h3> <!-- The title at the top -->
                     <!-- Other elements like images or icons can go here if needed -->
-                    <p  style="color: #000000;">The major problem included the limited movement of the catapult when the air tank was placed hori-zontally. The drivetrain model shown in figure 2 gives an accurate visualization of restricted area to place a pneumatic tank. </p>
+                    <p  style="color: #000000;">
+                        In the medication alert software, users are afforded the flexibility to customize the timing of their medication reminders, enhancing the adaptability of the application to individual routines and preferences. By default, the software is programmed to issue an alert 10 minutes prior to the designated medication time, serving as a preparatory reminder. However, recognizing the diversity in user needs, the software offers an easily accessible setting that allows for the adjustment of this alert time. Users can navigate to the settings menu, where they can select the 'Alert Timing' option to modify the advance notification period. This feature can be adjusted to shorter intervals, such as 5 minutes, or extended to longer durations, as per the user's convenience. This customization not only caters to different lifestyles and schedules but also ensures that users have sufficient time to take their medications punctually, thereby supporting effective health management.
+                         </p>
                     
                     <!-- The description at the bottom -->
                 </div>
             </div>
             <!-- Repeat for other items -->
             <div class="gallery-item">
-                <img src="images/absgraph.png" alt="floorplan">
+                <img src="images/userinput.jpg" alt="floorplan">
                 <div class="text-content">
-                    <h3>Pressure Ratings for ABS Pipes</h3> <!-- The title at the top -->
+                    <h3>Convenience</h3> <!-- The title at the top -->
                     <!-- Other elements like images or icons can go here if needed -->
-                    <p  style="color: #ffffff;">The pressure rating for different ABS pipe models are shown in table 1. Temperature increase of robots is common due to collisions and overheating robots. For 1½ inch pipe we are using, pressure rating for ABS 2112 is required for 200 psi rating. Since water pressure is stronger than air pressure, the theoretical yield should be higher than 200. </p> <!-- The description at the bottom -->
+                    <p  style="color: #ffffff;">The interface is user-friendly focused, designed to allow patients to efficiently manage their medication schedules. Users are prompted to input their medication details in two distinct fields: time of administration and medication name. The 'HH:MM AM/PM' field is where users specify the exact time for the medication alert, using a 12-hour clock format to accommodate ease of use. Adjacent to this, the 'Medication Name' field is provided for users to enter the name of the medication they need to be reminded to take. Once the details are inputted, clicking the 'Add' button will schedule the medication alert. The scheduled medications are then listed in a clear format, indicating their respective administration times, as shown in the list above the input fields. This streamlined input method ensures that users can quickly and accurately manage their medication times, contributing to improved adherence and overall health outcomes. </p> <!-- The description at the bottom -->
                 </div>
             </div>
             <div class="gallery-item right">
-                <img src="images/tankinitial.png" alt="Fishing">
+                <img src="images/alarmfile.jpg" alt="Fishing">
                 <div class="text-content">
                     <h3>Materials</h3> <!-- The title at the top -->
                     <!-- Other elements like images or icons can go here if needed -->
@@ -279,50 +282,27 @@
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="images/drillcap.png" alt="floorplan" >
+                <img src="images/maincode.jpg" alt="floorplan" >
                 <div class="text-content">
-                    <h3>Methods</h3> <!-- The title at the top -->
+                    <h3>Alert With .wav File</h3> <!-- The title at the top -->
                     <!-- Other elements like images or icons can go here if needed -->
-                    <p style="color: #ffffff;">To construct the tank, we first cut the ABS pipe to the required length of 8 inches, ensuring that it would fit within the robot's spatial constraints. Each end of the pipe was then sealed with a specially designed cap to create an airtight enclosure. The caps were carefully chosen to match the diameter of the pipe and were secured in place using an appropriate ABS adhesive to ensure a robust and leak-proof seal.
-                        For the air inlet, we installed a Schrader-compatible valve, a standard recognized for its reliability and ease of use. This valve was integrated into one of the end caps, allowing for straightforward pressurization and de-pressurization of the tank. To ensure airtightness around the valve, we applied thread sealing tape meticulously around its threads before screwing it into a pre-drilled hole in the cap. The use of thread sealing tape was crucial in preventing air leaks, thereby maintaining the efficiency and safety of the pneumatic system.
-                        </p> <!-- The description at the bottom -->
-                </div>
-            </div>
-            <div class="gallery-item right">
-                <img src="images/finishtank1.png" alt="Fishing">
-                <div class="text-content">
-                    <h3>Obstacles and Finished Product</h3> <!-- The title at the top -->
-                    <!-- Other elements like images or icons can go here if needed -->
-                    <p  style="color: #000000;">This process required precision as a slight angle will cause leakage in gas. Furthermore, threading becomes 	harder as screws are meant to thread-in vertically. Our team used TTB75 1½ Industrial Thread Sealing Tape. This 	prevents leakage as well as providing more stability during the construction of the robot. We used ABS cement to 	glue the cap to the body of the tube. Reading a journal on cement-based pizeoelectric sensors helped in finalizing	out decision. 
-                        Static currents are frequently encountered in robotics, especially when there are over 20 active ports for sen-sors, motors, and pistons. The use of polycarbonate in robot construction further elevates the likelihood of static buildup, particularly when foam tiles are present in the competition arena. Consequently, incorporating materials like cement and ABS is essential to reduce the robot's conductivity.
-                        </p> <!-- The description at the bottom -->
-                </div>
-            </div>
-            <!-- Repeat for other items -->
-            <div class="gallery-item">
-                <img src="images/tanktest.png" alt="floorplan" >
-                <div class="text-content">
-                    <h3>Testing Process</h3> <!-- The title at the top -->
-                    <!-- Other elements like images or icons can go here if needed -->
-                    <p style="color: #ffffff;">Instead of employing the typical "Drilling and Tapping" method, which involves using oil and various drill sizes to create a smooth hole and then tapping it with a lathe in the UW Machine Shop, we opted for manual threading. "Drilling and tapping" are two fundamental processes often used in machining and manufacturing to create threaded holes in a material. Here's a breakdown of each:
-                       
-                        The manual method demanded excessive force because of the friction from the non-threaded holes. A sim-pler analogy would be the difficulty of threading a flat surface screw, as opposed to a sharp wood screw, into a flat plastic piece. Figures 3 (a) and (b) show the bottom and top caps, respectively, of the completed pneu-matic model. 
-                        Using an automatic air pump and pressure gauge, the tank was able to withstand 100+ psi. 
+                    <p style="color: #ffffff;">
+
+                        The alarm system within the medication tracking software is an integral component designed to alert users when it is time to take their medication. To provide a clear and distinct sound, a .wav audio file has been imported into the Python program, which serves as the alarm tone. This is accomplished using Python's built-in wave module and external library such as pygame. The process involves loading the .wav file into the program's directory and utilizing a function that triggers the audio playback at the scheduled times for medication alerts. When the system clock matches a set reminder time, the program executes the audio playback function, thus emitting the sound from the user's device. This method ensures that the user is audibly notified, in addition to any on-screen notifications, creating a multi-sensory reminder system that is both effective and user-friendly. The implementation of this feature underscores the software's commitment to accessibility and ease of use in managing personal health regimens.
                         
                         </p> <!-- The description at the bottom -->
                 </div>
             </div>
             <div class="gallery-item right">
-                <img src="images/pullout.png" alt="Fishing">
+                <img src="images/dismiss.jpg" alt="Fishing">
                 <div class="text-content">
-                    <h3>Conclusion</h3> <!-- The title at the top -->
+                    <h3>Dismiss Button</h3> <!-- The title at the top -->
                     <!-- Other elements like images or icons can go here if needed -->
-                    <p  style="color: #000000;">As shown, using different brand for model M3 pipe cap may lead to different results. The summary indicates that Ruthex inserts are consistently stable across all tested loads, eBay inserts can han-dle up to 80 kg before becoming unstable, and Aliexpress inserts show significant performance issues at 40 kg and above. Therefore, it is important to check which brand of pipe inserts are being used. <br><br> In conclusion, the study successfully demonstrates that through innovative design and material selec-tion from construction ABS pipes to cement, a custom ABS pneumatic tank can be integrated into a robot constrained by size without any degrade in performance. The tank’s ability to withstand significant opera-tional pressures and reliable durability compared to original model overall shows the enhanced system for the Waterloo VEXU robotics team. The research also illustrates the importance of choosing appropriate components, as brand variability can have a profound impact on the reliability of the tank, which is a crucial aspect in competitive robotics.
-
- 
+                    <p  style="color: #000000;">The dismiss button is a critical feature of the medication tracking software's alarm system, designed to offer users control over the management of their medication reminders. Once an alert is triggered, indicating that it is time to take a medication, the user is presented with the option to dismiss the alert through this button. Engaging the dismiss button serves a dual purpose: it not only silences the alarm, preventing further auditory notifications, but also logs the action, which can be used to confirm that the user has acknowledged the reminder.
                         </p> <!-- The description at the bottom -->
                 </div>
             </div>
+
         </div>
 
 
@@ -437,7 +417,7 @@
                             </h4>
 
                             <div class="social-box">
-                                <a href="">
+                                <a href="https://www.instagram.com/clearone_innovators/" target="_blank">
                                     <img src="images/instagram2.png" width="40" height="40" alt="instagram">
                                 </a>
 
