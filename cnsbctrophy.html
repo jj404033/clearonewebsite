@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>3D Trophy Design</title>
+    <link rel="icon" type="image/png" href="images/clearonelogo.png" >
+
+    <!-- slider stylesheet -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:400,700&display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="css/responsive.css" rel="stylesheet" />
+
+
+<!-- Jeong doing shit -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style4.css">
+
+
+
+
+    <style>
+.text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* This spreads out the children */
+    padding: 20px; /* Adjust the padding as needed */
+    height: 100%; /* Make the text-content fill the parent's height */
+}
+.gallery-item {
+  
+    width: calc(100% - 40px); /* Full width with some padding */
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    box-shadow: 0 50px 400px rgba(0, 0, 0, 0.1);   
+    margin: 40px auto; /* Increased margin to add space between boxes */
+    height: 500px; /* Adjust height to content or set a specific height */
+}
+
+.gallery-item img,
+.text-content {
+    /* Other properties remain the same */
+    height: 300px; /* Set a fixed height or use 'auto' for content-based height */
+    display: flex; /* Use flexbox to center content vertically */
+    align-items: center; /* Aligns content vertically */
+    justify-content: center; /* Aligns content horizontally */
+    text-align: left; /* Ensures text is centered within the text-content */
+}
+
+/* You may also want to add some padding inside the text-content for better spacing */
+.text-content {
+    /* Other properties remain the same */
+    padding: 20px; /* Adjust padding to create more space inside the content box */
+}
+.photo-gallery {
+    max-width: 1200px; /* or your desired max-width */
+    margin: 100px auto; /* Adjust the value to create more space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.gallery-item:first-child {
+    margin-top: 100px; /* Add space above the first gallery item */
+}
+
+.gallery-item:last-child {
+    margin-bottom: 100px; /* Add space below the last gallery item */
+}
+.gallery-item:nth-child(odd) {
+    background-color: #ff4f5a; /* This will be the color for odd boxes */
+    margin-right: auto;
+    margin-left: 10%;
+}
+
+.gallery-item:nth-child(even) {
+    background-color: #ffffff; /* This will be the color for even boxes */
+    margin-left: auto;
+    margin-right: 10%;
+}
+
+.gallery-item:nth-child(odd) .text-content,
+.gallery-item:nth-child(odd) img {
+    color: #ffffff; /* This will ensure text is white on the colored background */
+}
+
+.gallery-item:nth-child(even) .text-content,
+.gallery-item:nth-child(even) img {
+    color: #000000; /* This will ensure text is black on the white background */
+}
+
+.gallery-item img {
+    width: 40%;
+    height: auto;
+}
+
+.text-content {
+    padding: 20px;
+    width: 50%;
+}
+
+     /* General styles */
+     body {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    /* Fluid grid example */
+    .container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    /* Flexible images */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    @media only screen and (max-width: 768px) {
+    /* Center the gallery-item, with pink background, and limit its maximum width */
+    .gallery-item {
+        margin: 10px auto; /* Adds vertical space and centers horizontally */
+        padding: 15px; /* Adds internal padding */
+        width: 90%; /* Limits width to 90% of the screen size */
+        max-width: 500px; /* Maximum width can be adjusted as needed */
+        box-sizing: border-box; /* Ensures padding is included in the width */
+        background-color: #ffc0cb; /* Pink background color */
+        display: flex; /* Enables flexbox layout */
+        flex-direction: column; /* Stacks children vertically */
+        align-items: center; /* Centers children horizontally */
+    }
+
+    /* Adjust image size and centering */
+    .gallery-item img {
+        max-width: 100%; /* Ensures the image is not wider than its container */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Ensures the image is on its own line */
+        margin: 15px auto; /* Centers the image and adds vertical spacing */
+    }
+
+    /* Adjust the text content box with a white background */
+    .text-content {
+        font-size: 14px; /* Adjust font size for readability */
+        color: #000000; /* Text color */
+        padding: 15px; /* Internal padding */
+        margin: 15px auto; /* Centers the text box and adds vertical spacing */
+        width: 90%; /* Limits width to 90% of the screen size */
+        max-width: 500px; /* Maximum width can be adjusted as needed */
+        box-sizing: border-box; /* Ensures padding is included in the width */
+        text-align: start; /* Aligns text to the start */
+    }
+
+    /* Adjust paragraph styles */
+    .text-content p {
+        font-size: 11px; /* Adjust paragraph font size */
+        line-height: 1; /* Adjust line height for readability */
+        margin: 0 0 10px; /* Space at the bottom of paragraphs */
+    }
+
+    /* Adjust heading styles */
+    .text-content h1,
+    .text-content h2,
+    .text-content h3,
+    .text-content h4,
+    .text-content h5,
+    .text-content h6 {
+        font-size: 16px; /* Adjust heading sizes */
+        margin-top: 0; /* Remove top margin for headings if needed */
+    }
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="hero_area">
+        <!-- header section strats -->
+        <header class="header_section">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg custom_nav-container ">
+                    <a class="navbar-brand" href="index.html">
+                        <span>
+                            ClearOne
+                        </span>
+                    </a>
+                    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
+                            <ul class="navbar-nav  ">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html">Home <span
+                                            class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="ourteam.html"> Our Team </a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="projects.html"> Projects </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contact.html">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </nav>
+            </div>
+        </header>
+
+
+        <!-- time to code zigzag -->
+        <div class="photo-gallery">
+            <div class="gallery-item">
+                <img src="images/steelbridgee.jpg" alt="floorplan">
+                <div class="text-content">
+                    <h3>Introduction</h3> <!-- The title at the top -->
+                    <!-- Other elements like images or icons can go here if needed -->
+                    <p  style="color: #ffffff;">
+                        The Canadian National Steel Bridge Competition increases awareness of real-world engineering issues such as spatial constraints, material properties, strength, serviceability, fabrication and erection processes, safety, aesthetics, project management, and costs. Success in competition requires the application of engineering principles and theory, and effective teamwork. Future engineers are stimulated to innovate, practise professionalism, and use structural steel efficiently.
+
+                        Students design and erect a steel bridge by themselves but may consult with faculty and other advisors. The objective of this project is to create a trophy for the Canadian National Steel Bridge Competition that will historically carry-on in the future. As there are no past references for the trophy model, a creative and artistic design was the main focus.</p> <!-- The description at the bottom -->
+                </div>
+            </div>
+            <div class="gallery-item right">
+                <img src="images/basedesign.png" alt="Fishing">
+                <div class="text-content">
+                    <h3>Base Design</h3> <!-- The title at the top -->
+                    <!-- Other elements like images or icons can go here if needed -->
+                    <p  style="color: #000000;">
+                        The base design of the trophy is a basic design to utilize maximum space for the competition winners. Its broad surface area on the sides allows for ample space to engrave personalized inscriptions, emphasizing the achievements of the recipient.
+                        Although the choice of material can not be enforced by the designer, the finished CAD model is in gray/silver to suggest steel which enhances the trophy's durability but also contributes to a polished and sophisticated appearance. The clean lines and neutral tones of the base create a timeless design that seamlessly complements the diverse styles of trophies it can support. This thoughtfully designed base serves as a versatile canvas, accommodating various themes or elements that can be incorporated into the trophy, ensuring a harmonious blend of functionality, visual appeal, and personalization. 
+                         </p>
+                    
+                    <!-- The description at the bottom -->
+                </div>
+            </div>
+            <!-- Repeat for other items -->
+            <div class="gallery-item">
+                <img src="images/trussdesign.png" alt="floorplan">
+                <div class="text-content">
+                    <h3>Truss Bridge</h3> <!-- The title at the top -->
+                    <!-- Other elements like images or icons can go here if needed -->
+                    <p  style="color: #ffffff;">Incorporating a model of a truss bridge into a trophy design would be a fitting choice for several reasons. Firstly, the truss bridge symbolizes strength, resilience, and the ability to overcome challenges – qualities often associated with achievement and success. The geometric patterns of a truss bridge also represent precision and engineering excellence, making it a suitable metaphor for the dedication and expertise required in various fields. Furthermore, the aesthetic appeal of a truss bridge can add a touch of elegance and sophistication to the trophy, making it more visually striking. This choice not only honors accomplishments but also serves as a metaphorical bridge connecting the past and the future, acknowledging the historical significance of engineering marvels while inspiring future generations to reach new heights in their endeavors.</p> <!-- The description at the bottom -->
+                </div>
+            </div>
+            <div class="gallery-item right">
+                <img src="images/trophydesign.png" alt="Fishing">
+                <div class="text-content">
+                    <h3>Rendered Assembly Model</h3> <!-- The title at the top -->
+                    <!-- Other elements like images or icons can go here if needed -->
+                    <p  style="color: #000000;">In the completed rendered model, a powerful symbolism emerges as a person is holding up a bridge,  illustrating the profound connection between individuals and the infrastructure that shapes our communities. The figure's strength and determination symbolize the collective responsibility we bear for the bridges in our lives, both metaphorically and literally. The bridge, a link in transportation and connectivity, becomes a noticeable representation of shared efforts and support. This artistic portrayal underscores the idea that the resilience and stability of our societal bridges are within our hands. It serves as a reminder that through collective effort, care, and responsibility, we have the capacity to uphold and strengthen the foundations that connect us all.</p> <!-- The description at the bottom -->
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/demensiondesign.png" alt="floorplan" >
+                <div class="text-content">
+                    <h3>Dimension Shop Drawing</h3> <!-- The title at the top -->
+                    <!-- Other elements like images or icons can go here if needed -->
+                    <p style="color: #ffffff;">
+                        </p> <!-- The description at the bottom -->
+                </div>
+            </div>
+            <div class="gallery-item right">
+                <img src="images/cnsbc.jpg" alt="Fishing">
+                <div class="text-content">
+                    <h3>Conclusion</h3> <!-- The title at the top -->
+                    <!-- Other elements like images or icons can go here if needed -->
+                    <p  style="color: #000000;">
+                        In conclusion, the trophy design project has been a journey of creative exploration, culminating in a beautifully rendered model. The incorporation of a truss bridge symbolizes strength and achievement, paying close attention to engineering process. The designed base maximizes space for personalization, adding elegance to the trophy. Depicting a person holding up a bridge, the design signifies the interconnectedness between individuals and the structures shaping our communities. This trophy stands not only as a symbol of accomplishment but also as a testament to shared responsibility in upholding the bridges, both literal and metaphorical, that connect us all. It blends aesthetics with profound symbolism, creating a trophy that resonates with significance and showcases dedication and creativity.
+                        </p> <!-- The description at the bottom -->
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- info section -->
+        <section class="info_section layout_padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="info-logo">
+                            <h2>
+                                ClearOne
+                            </h2>
+                            <p>
+                                We make things clear, and unify into one.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="info-nav">
+                            <h4>
+                                Navigation
+                            </h4>
+                            <ul>
+                                <li>
+                                    <a href="index.html">
+                                        Home
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="ourteam.html">
+                                        Our Team
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="projects.html">
+                                        Projects
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="contact.html">
+                                        Contact Us
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="info-contact">
+                            <h4>
+                                Contact Info
+                            </h4>
+                            <div class="location">
+                                <h6>
+                                    Address:
+                                </h6>
+
+                                <img src="images/location.png" alt="">
+                                <span>
+                                    200 University Avenue W, Waterloo, ON, N2L 3G1
+                                </span>
+                                </a>
+                            </div>
+                            <div class="call">
+                                <h6>
+                                    Call:
+                                </h6>
+
+                                <img src="images/telephone.png" alt="">
+                                <span>
+                                    (+1 778 222 7753)
+                                </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="discover">
+                            <h4>
+                                Discover
+                            </h4>
+
+                            <div class="social-box">
+                                <a href="https://www.instagram.com/clearone_innovators/" target="_blank">
+                                    <img src="images/instagram2.png" width="40" height="40" alt="instagram">
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- end info_section -->
+
+        <!-- footer section -->
+        <section class="container-fluid footer_section">
+            <p>
+                Copyright &copy; 2023 All Rights Reserved By
+                <a href="jeongchoi.html"><b>Jeongyun (Jeong) Choi</b></a>
+            </p>
+        </section>
+        <!-- footer section -->
+
+        <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.9/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
