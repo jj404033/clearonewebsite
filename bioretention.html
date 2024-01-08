@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Eco-friendly Bioretention</title>
+    <link rel="icon" type="image/png" href="images/clearonelogo.png" >
+
+    <!-- slider stylesheet -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:400,700&display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="css/responsive.css" rel="stylesheet" />
+
+
+<!-- Jeong doing shit -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style4.css">
+
+
+
+
+    <style>
+.text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* This spreads out the children */
+    padding: 20px; /* Adjust the padding as needed */
+    height: 100%; /* Make the text-content fill the parent's height */
+}
+.gallery-item {
+  
+    width: calc(100% - 40px); /* Full width with some padding */
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    box-shadow: 0 50px 400px rgba(0, 0, 0, 0.1);   
+    margin: 40px auto; /* Increased margin to add space between boxes */
+    height: 500px; /* Adjust height to content or set a specific height */
+}
+.gallery-item2 {
+  
+  width: calc(120% - 300px); /* Full width with some padding */
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  box-shadow: 0 50px 400px rgba(0, 0, 0, 0.1);   
+  margin: 40px auto; /* Increased margin to add space between boxes */
+  height: 500px; /* Adjust height to content or set a specific height */
+}
+
+.gallery-item img,
+.text-content {
+    /* Other properties remain the same */
+    height: 300px; /* Set a fixed height or use 'auto' for content-based height */
+    display: flex; /* Use flexbox to center content vertically */
+    align-items: center; /* Aligns content vertically */
+    justify-content: center; /* Aligns content horizontally */
+    text-align: left; /* Ensures text is centered within the text-content */
+}
+
+/* You may also want to add some padding inside the text-content for better spacing */
+.text-content {
+    /* Other properties remain the same */
+    padding: 20px; /* Adjust padding to create more space inside the content box */
+}
+.photo-gallery {
+    max-width: 1200px; /* or your desired max-width */
+    margin: 100px auto; /* Adjust the value to create more space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery-item:first-child {
+    margin-top: 100px; /* Add space above the first gallery item */
+}
+
+.gallery-item:last-child {
+    margin-bottom: 100px; /* Add space below the last gallery item */
+}
+.gallery-item:nth-child(odd) {
+    background-color: #ff4f5a; /* This will be the color for odd boxes */
+    margin-right: auto;
+    margin-left: 10%;
+}
+
+.gallery-item:nth-child(even) {
+    background-color: #ffffff; /* This will be the color for even boxes */
+    margin-left: auto;
+    margin-right: 10%;
+}
+
+.gallery-item:nth-child(odd) .text-content,
+.gallery-item:nth-child(odd) img {
+    color: #ffffff; /* This will ensure text is white on the colored background */
+}
+
+.gallery-item:nth-child(even) .text-content,
+.gallery-item:nth-child(even) img {
+    color: #000000; /* This will ensure text is black on the white background */
+}
+
+.gallery-item img {
+    width: 40%;
+    height: auto;
+}
+
+.text-content {
+    padding: 20px;
+    width: 50%;
+}
+
+     /* General styles */
+     body {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    /* Fluid grid example */
+    .container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    /* Flexible images */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    @media only screen and (max-width: 768px) {
+    /* Center the gallery-item, with pink background, and limit its maximum width */
+    .gallery-item {
+        margin: 10px auto; /* Adds vertical space and centers horizontally */
+        padding: 15px; /* Adds internal padding */
+        width: 90%; /* Limits width to 90% of the screen size */
+        max-width: 500px; /* Maximum width can be adjusted as needed */
+        box-sizing: border-box; /* Ensures padding is included in the width */
+        background-color: #ffc0cb; /* Pink background color */
+        display: flex; /* Enables flexbox layout */
+        flex-direction: column; /* Stacks children vertically */
+        align-items: center; /* Centers children horizontally */
+    }
+
+    /* Adjust image size and centering */
+    .gallery-item img {
+        max-width: 100%; /* Ensures the image is not wider than its container */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Ensures the image is on its own line */
+        margin: 15px auto; /* Centers the image and adds vertical spacing */
+    }
+
+    /* Adjust the text content box with a white background */
+    .text-content {
+        font-size: 14px; /* Adjust font size for readability */
+        color: #000000; /* Text color */
+        padding: 15px; /* Internal padding */
+        margin: 15px auto; /* Centers the text box and adds vertical spacing */
+        width: 90%; /* Limits width to 90% of the screen size */
+        max-width: 500px; /* Maximum width can be adjusted as needed */
+        box-sizing: border-box; /* Ensures padding is included in the width */
+        text-align: start; /* Aligns text to the start */
+    }
+
+    /* Adjust paragraph styles */
+    .text-content p {
+        font-size: 11px; /* Adjust paragraph font size */
+        line-height: 1; /* Adjust line height for readability */
+        margin: 0 0 10px; /* Space at the bottom of paragraphs */
+    }
+
+    /* Adjust heading styles */
+    .text-content h1,
+    .text-content h2,
+    .text-content h3,
+    .text-content h4,
+    .text-content h5,
+    .text-content h6 {
+        font-size: 16px; /* Adjust heading sizes */
+        margin-top: 0; /* Remove top margin for headings if needed */
+    }
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="hero_area">
+        <!-- header section strats -->
+        <header class="header_section">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg custom_nav-container ">
+                    <a class="navbar-brand" href="index.html">
+                        <span>
+                            ClearOne
+                        </span>
+                    </a>
+                    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
+                            <ul class="navbar-nav  ">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html">Home <span
+                                            class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="ourteam.html"> Our Team </a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="projects.html"> Projects </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contact.html">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </nav>
+            </div>
+        </header>
+
+
+        <!-- time to code zigzag -->
+        <div class="photo-gallery">
+            <div class="gallery-item">
+                <img src="images/abstract.png" alt="floorplan">
+                <div class="text-content">
+                    <h3>Abstract</h3> <!-- The title at the top -->
+                    <!-- Other elements like images or icons can go here if needed -->
+                    <p  style="color: #ffffff;">The escalating threats of microplastics, oil spills, steel debris, and acidic water pose severe risks to marine creatures and their ecosystems. In response to these environmental challenges, a transformative project has been initiated to create a physical bioretention model. This innovative solution aims to filter out harmful substances from water, producing a purified and safe environment for marine life. By addressing the root causes of pollution, the bioretention model emerges as a pivotal tool in safeguarding biodiversity and fostering the sustainability of aquatic ecosystems.
+
+                    </p> <!-- The description at the bottom -->
+                </div>
+            </div>
+            <div class="gallery-item right">
+                <img src="images/materials.jpg" alt="Fishing">
+                <div class="text-content">
+                    <h3>Materials</h3> <!-- The title at the top -->
+                    <!-- Other elements like images or icons can go here if needed -->
+                    <p  style="color: #000000;">
+                        The implementation of the physical bioretention model involved a thoughtful selection of materials to optimize its environmental impact. PVC pipe, chosen for its eco-friendly characteristics compared to ABS, served as the structural framework. Gravel played a crucial role in promoting drainage and preventing clogging, while sand facilitated additional filtration. Charcoal/carbon acted as an absorbent to capture impurities and contaminants effectively. Filter fiber further refined water quality by trapping smaller particles. Integrating plants such as bamboo and fern not only contributed to the model's aesthetics but also played a vital role in phytoremediation, enhancing water purification through the plants' natural filtering capabilities. Lastly, the inclusion of dirt provided a substrate for plant growth and supported the overall biological functions of the system. This comprehensive choice of materials aimed to create a holistic and efficient bioretention model capable of addressing various pollutants and fostering a sustainable, eco-friendly solution for marine ecosystems.
+                    </p>
+                    
+                    <!-- The description at the bottom -->
+                </div>
+            </div>
+            <!-- Repeat for other items -->
+            <div class="gallery-item">
+                <img src="images/pvcinstall.jpg" alt="floorplan">
+                <div class="text-content">
+                    <h3>PVC Pipe Installation</h3> <!-- The title at the top -->
+                    <!-- Other elements like images or icons can go here if needed -->
+                    <p  style="color: #ffffff;">The installation of the PVC pipe within the bioretention model followed a strategic sequence to ensure optimal functionality. Beginning with the bin, two sizable holes were carefully created at the bottom to accommodate the PVC pipe's passage. Subsequently, a three-way joint was introduced, serving as a pivotal connection point for integration into the overflow system. To enhance the safety and efficiency of the pipes, carefully positioned holes were added to prevent any potential for bursting while simultaneously facilitating the efficient collection of filtered water. This meticulous approach in installing the PVC pipe system underscored a commitment to both structural integrity and operational effectiveness within the bioretention model. Throughout each process, we used silicon glue to ensure everything is sealed and in the right place.
+
+
+
+
+
+                    </p> <!-- The description at the bottom -->
+                </div>
+            </div>
+            <div class="gallery-item right">
+                <img src="images/layers.jpg" alt="Fishing">
+                <div class="text-content">
+                    <h3>Layers</h3> <!-- The title at the top -->
+                    <!-- Other elements like images or icons can go here if needed -->
+                    <p  style="color: #000000;">The layering system within the bioretention model was designed to make an effective water filtration process, combining elements from both standard bioretention practices and clean water filter systems. The foundation of the layering comprised gravel, serving as the initial filtration barrier to prevent clogging and facilitate efficient drainage. Above the gravel layer, a specialized filtering layer was incorporated, inspired by conventional bioretention systems, to trap larger debris and contaminants. Charcoal, recognized for its absorbent properties, followed suit, providing an additional layer of purification by capturing impurities. Subsequently, sand was introduced, acting as a fine filter to further refine water quality. Finally, the top layer consisted of dirt, creating a substrate for plant growth and facilitating the biological processes inherent to traditional bioretention systems. This innovative process of standard bioretention and clean water filter layers resulted in a comprehensive and efficient filtration system, demonstrating a synergistic approach to water purification within the bioretention model.
+                    </p> <!-- The description at the bottom -->
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/overflow.jpg" alt="floorplan" >
+                <div class="text-content">
+                    <h3>Overflow Control System
+                    </h3> <!-- The title at the top -->
+                    <!-- Other elements like images or icons can go here if needed -->
+                    <p style="color: #ffffff;">
+
+                        Aligned with conventional bioretention principles, our model incorporated an efficient overflow control system to manage excess water. A fundamental filter was strategically integrated to ensure that overflow water seamlessly directed into the PVC pipes. This simple yet effective measure served a dual purpose: it prevented potential flooding by controlling the volume of water within the system, and concurrently, it allowed for the swift and direct passage of excess water through the PVC pipes. The overflow control system underscored our commitment to maintaining a balanced water level within the bioretention model while facilitating the smooth operation of the overall filtration process. This implication referenced from established practices in bioretention design, contributing to the sustainability and functionality of our model in reducing the impact of pollutants on marine ecosystems.
+                        </p> <!-- The description at the bottom -->
+                </div>
+            </div>
+            <div class="gallery-item right">
+                <img src="images/plants.jpg" alt="floorplan" >
+                <div class="text-content">
+                    <h3>Plants and Aesthetics
+                    </h3> <!-- The title at the top -->
+                    <!-- Other elements like images or icons can go here if needed -->
+                    <p style="color: #000000;">
+                        
+
+                        In addition to the functional aspects of the bioretention model, aesthetics were considered a valuable component, contributing to both visual appeal and the overall effectiveness of the system. To enhance the model's appearance, we incorporated carefully selected plants and small rocks. However, our choice of vegetation extended beyond mere aesthetics; we strategically opted for ferns and bamboo due to their exceptional bioretention properties. Ferns possess a natural affinity for water absorption, aiding in the filtration process by capturing and utilizing excess water. Bamboo, on the other hand, is renowned for its ability to thrive in various soil conditions, contributing to stabilizing the substrate while actively participating in the phytoremediation process. This intentional selection of plants not only added a visually pleasing dimension to the bioretention model but also reinforced its ecological functionality, highlighting the symbiotic relationship between aesthetics and environmental sustainability. 
+                        </p> <!-- The description at the bottom -->
+                </div>
+                
+
+            </div>
+            <div class="gallery-item">
+                <img src="images/pollutedwater.jpg" alt="floorplan" >
+                <div class="text-content">
+                    <h3>Polluted Water & Sources</h3> <!-- The title at the top -->
+                    <!-- Other elements like images or icons can go here if needed -->
+                    <p style="color: #ffffff;">
+                        The polluted water used in our bioretention model mirrored real-world environmental challenges, incorporating a range of contaminants. The water source included a mixture of microplastics and metal scraps, representing prevalent pollutants that significantly impact marine ecosystems. Microplastics, obtained from the breakdown of plastic products, pose a severe threat to aquatic life, while metal scraps contribute to water contamination through industrial runoff and other human activities. To mimic the acidity commonly associated with polluted water, lemons were introduced, lowering the pH level to a challenging range of 3-4. This acidic condition is often observed in bodies of water affected by industrial discharges or acid rain, further underscoring the diverse challenges our bioretention model aimed to address. Additionally, cooking oil was incorporated to simulate the presence of engine oil or similar substances, emphasizing the need for effective filtration methods to combat the detrimental effects of oil-based pollutants on aquatic environments.
+                        </p> <!-- The description at the bottom -->
+                </div>
+            </div>
+            <div class="gallery-item right">
+                <img src="images/filteredwater.jpg" alt="Fishing">
+                <div class="text-content">
+                    <h3>Filtered Water
+                    </h3> <!-- The title at the top -->
+                    <!-- Other elements like images or icons can go here if needed -->
+                    <p  style="color: #000000;">
+                        The filter came out successful as our bioretention model showcased a significant transformation of polluted water into a filtered, ideal state suitable for marine life. The slightly brownish hue observed in the filtered water was attributed to the presence of the top dirt layer, emphasizing the effectiveness of the layered filtration system in trapping impurities. Crucially, the absence of microplastics underscored the model's efficacy in addressing this pervasive pollutant, offering a promising solution to mitigate its harmful impact on marine ecosystems. Importantly, the absence of steel parts further affirmed the model's ability to eliminate metal scraps and other contaminants, ensuring the production of water that is not only clear but also ecologically sound and conducive to the well-being of marine life.
+                        </p> <!-- The description at the bottom -->
+                </div>
+            </div>
+              <div class="gallery-item">
+                <img src="images/testacid.jpg" alt="floorplan" >
+                <div class="text-content">
+                    <h3>Acidity Test</h3> <!-- The title at the top -->
+                    <!-- Other elements like images or icons can go here if needed -->
+                    <p style="color: #ffffff;">
+                        
+The acidity test conducted on the polluted water within our bioretention model demonstrated a remarkable transformation in pH levels, as evidenced by a before-and-after comparison. Initially, the water exhibited an acidity level of approximately pH 3-4, reflecting a severely acidic condition. However, after undergoing the comprehensive filtration process of the bioretention model, the resulting filtered water showcased a substantial improvement, attaining a more neutral pH range of 7-8. This significant shift highlighted the model's effectiveness in addressing and mitigating the acidity introduced during the simulation. 
+</p> <!-- The description at the bottom -->
+                </div>
+            </div>
+            <div class="gallery-item right">
+                <img src="images/conclusion.jpg" alt="Fishing">
+                <div class="text-content">
+                    <h3>Conclusion</h3> <!-- The title at the top -->
+                    <!-- Other elements like images or icons can go here if needed -->
+                    <p  style="color: #000000;">
+                        
+                        In conclusion, our bioretention model stands as a holistic solution to water pollution, offering a strategic blend of innovative design and functional efficiency. The layered filtration system, inspired by both standard bioretention and clean water filter practices, showcases a thoughtful integration of materials like eco-friendly PVC pipes, gravel, charcoal, sand, and dirt. The inclusion of ferns and bamboo enhances both aesthetics and bioretention capabilities. The overflow control system prevents flooding, ensuring a balanced water level. Simulated tests with pollutants demonstrate the model's efficacy, resulting in filtered water with a neutral pH of 7-8, free from microplastics and steel parts. This project signifies a meaningful step towards sustainable water management, providing a promising solution to combat contemporary environmental challenges and foster the well-being of marine life.
+
+
+
+
+
+
+
+                    </p> <!-- The description at the bottom -->
+                </div>
+            </div>
+            
+        </div>
+        <!-- info section -->
+        <section class="info_section layout_padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="info-logo">
+                            <h2>
+                                ClearOne
+                            </h2>
+                            <p>
+                                We make things clear, and unify into one.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="info-nav">
+                            <h4>
+                                Navigation
+                            </h4>
+                            <ul>
+                                <li>
+                                    <a href="index.html">
+                                        Home
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="ourteam.html">
+                                        Our Team
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="projects.html">
+                                        Projects
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="contact.html">
+                                        Contact Us
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="info-contact">
+                            <h4>
+                                Contact Info
+                            </h4>
+                            <div class="location">
+                                <h6>
+                                    Address:
+                                </h6>
+
+                                <img src="images/location.png" alt="">
+                                <span>
+                                    200 University Avenue W, Waterloo, ON, N2L 3G1
+                                </span>
+                                </a>
+                            </div>
+                            <div class="call">
+                                <h6>
+                                    Call:
+                                </h6>
+
+                                <img src="images/telephone.png" alt="">
+                                <span>
+                                    (+1 778 222 7753)
+                                </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="discover">
+                            <h4>
+                                Discover
+                            </h4>
+
+                            <div class="social-box">
+                                <a href="https://www.instagram.com/clearone_innovators/" target="_blank">
+                                    <img src="images/instagram2.png" width="40" height="40" alt="instagram">
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- end info_section -->
+
+        <!-- footer section -->
+        <section class="container-fluid footer_section">
+            <p>
+                Copyright &copy; 2023 All Rights Reserved By
+                <a href="jeongchoi.html"><b>Jeongyun (Jeong) Choi</b></a>
+            </p>
+        </section>
+        <!-- footer section -->
+
+        <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.9/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
