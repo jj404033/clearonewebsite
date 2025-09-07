@@ -866,5 +866,79 @@ border-radius: 30px;
   border: none !important;
   box-shadow: none !important; /* In case there's a shadow */
 }
+.team-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.team-link:hover .team-member {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+/* Cleaner Modern Card */
+.modern-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s ease-in-out;
+}
+.modern-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+.modern-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+.modern-card-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.modern-card-body h6 {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+.modern-card-body p {
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+  color: #555;
+}
+.modern-card-body a.btn {
+  align-self: start;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  padding: 0.35rem 0.75rem;
+}
+.projects-grid {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+
+.section-header h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;   /* bigger and bolder */
+  letter-spacing: 0.5px;
+  color: #222;       /* matches your dark site text */
+  margin-bottom: 0.25rem;
+}
+
+.section-header p {
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: #6c757d;    /* muted grey */
+}
+
   /* end footer section*/
   /*# sourceMappingURL=style.css.map */
