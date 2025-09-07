@@ -1,473 +1,459 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <title>John Choi</title>
+  <link rel="icon" type="image/png" href="images/clearlogo.png" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-    <meta charset="utf-8">
-    <title>Jeongyun (John) Choi</title>
-    <link rel="icon" type="image/png" href="images/clearonelogo.png" >
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+  <!-- Libraries -->
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <!-- Site styles -->
+  <link href="css/style2.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
 
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body { font-family: 'Roboto', sans-serif; }
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    /* NAV resume button */
+    .btn-resume { border-radius:.5rem; padding:.45rem .9rem; font-weight:600; }
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/style2.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    /* HERO with your canyon photo */
+    .hero {
+      position: relative;
+      min-height: 76vh;
+      background: url("images/john-hero.jpg") center right / cover no-repeat;
+      display: flex; align-items: center;
+    }
+    .hero::after {
+      content:""; position:absolute; inset:0;
+      background: linear-gradient(90deg, rgba(0,0,0,0.0) 40%, rgba(0,0,0,0.25) 100%);
+    }
+    .hero .container { position: relative; z-index: 2; }
+    .hero-card {
+      margin-left: auto;
+      max-width: 520px;
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(4px);
+      border-radius: 1rem;
+      box-shadow: 0 20px 40px rgba(0,0,0,.15);
+      padding: 1.5rem 1.75rem;
+    }
+    .hero-card h1 { font-weight: 900; margin: 0 0 .25rem; }
+    .hero-card p.lead { margin: 0 0 1rem; color:#334155; }
+    .hero-btns .btn { border-radius:.65rem; padding:.6rem 1rem; font-weight:700; }
+    .hero-space { padding: 2rem 0; }
+
+    /* Section titles */
+    .section-title .shadow-word {
+      -webkit-text-stroke: 1px #ffffff; color: transparent; opacity: .5;
+    }
+
+    /* Education & Experience cards (no logos) */
+    .exp-section .card, .edu-section .card {
+      border: 0; border-radius: 1rem; box-shadow: 0 10px 24px rgba(0,0,0,.08);
+    }
+    .exp-meta, .edu-meta { font-size: .92rem; color: #6c757d; }
+    .exp-bullets, .edu-bullets { margin-bottom: 0; }
+    .exp-bullets li { margin-bottom: .35rem; }
+
+    /* Skills badges */
+    .skills-list { list-style: none; padding-left: 0; }
+    .skills-list li { margin-bottom: .4rem; }
+    .skill-tag { display:inline-block; background:#f1f5f9; border-radius:.5rem; padding:.25rem .5rem; font-weight:600; }
+
+    /* Portfolio preview grid */
+    .portfolio-item .portfolio-btn {
+      position:absolute; inset:0; background:rgba(13,110,253,.86);
+      opacity:0; transition:.2s; border-radius:.5rem;
+    }
+    .portfolio-item:hover .portfolio-btn { opacity:1; }
+    .project-img { aspect-ratio: 4/3; object-fit: cover; }
+  </style>
 </head>
-<div class="hero_area">
-    <!-- header section strats -->
-    <header class="header_section">
-        <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg custom_nav-container ">
-                <a class="navbar-brand" href="index.html">
-                    <span>
-                        ClearOne
-                    </span>
-                </a>
-                <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
-                        <ul class="navbar-nav  ">
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item active">
-                                <a class="nav-link" href="ourteam.html"> Our Team </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="projects.html"> Projects </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Contact Us</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+<body data-spy="scroll" data-target=".navbar" data-offset="51">
+  <!-- Header -->
+  <header class="header_section">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg custom_nav-container">
+        <a class="navbar-brand" href="index.html"><span>ClearOne</span></a>
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-            </nav>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
+            <ul class="navbar-nav">
+              <li class="nav-item active"><a class="nav-link" href="johnchoi.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="ourteam.html">Our Team</a></li>
+              <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+          <a href="docs/John_Resume_External.pdf" target="_blank" rel="noopener"
+             class="btn btn-outline-primary btn-resume ml-lg-3">
+            <i class="far fa-file-alt mr-1"></i> View Résumé
+          </a>
         </div>
-    </header>
+      </nav>
+    </div>
+  </header>
 
-    <body data-spy="scroll" data-target=".navbar" data-offset="51">
-        <!-- Navbar Start -->
-        <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
-            <a href="index.html" class="navbar-brand ml-lg-3">
-                <h1 class="m-0 display-5"><span class="text-primary">John </span>Choi</h1>
-            </a>
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse px-lg-3" id="navbarCollapse">
-
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-space">
+      <div class="row">
+        <div class="col-12 col-lg-7"></div>
+        <div class="col-12 col-lg-5">
+          <div class="hero-card">
+            <h1>Hello, my name is John Choi</h1>
+            <p class="lead">3rd year Mechanical Engineering student & licensed electrician</p>
+            <div class="hero-btns d-flex flex-wrap gap-2">
+              <a href="docs/John_Resume_External.pdf" target="_blank" rel="noopener"
+                 class="btn btn-primary mr-2 mb-2">
+                <i class="far fa-file-alt mr-2"></i> View Résumé
+              </a>
+              <a href="docs/John_Resume_External.pdf" download
+                 class="btn btn-outline-primary mb-2">
+                <i class="fas fa-download mr-2"></i> Download Résumé
+              </a>
             </div>
-          
-</div>
-</nav>
-<!-- Navbar End -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-
-
-
-
-<!-- Header Start -->
-<div class="container-fluid bg-primary d-flex align-items-center mb-5 py-5" id="home" style="min-height: 100vh;">
+  <!-- ABOUT -->
+  <section class="container-fluid py-5" id="about">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-5 px-5 pl-lg-0 pb-5 pb-lg-0">
-                <img class="img-fluid w-100 rounded-circle shadow-sm" src="images/wjd.jpg" alt="">
-            </div>
-            <div class="col-lg-7 text-center text-lg-left">
-                <h3 class="text-white font-weight-normal mb-3">Hello, my name is:</h3>
-                <h1 class="display-3 text-uppercase text-primary mb-2" style="-webkit-text-stroke: 2px #ffffff;">
-                    Jeongyun (John) Choi</h1>
-                <h1 class="typed-text-output d-inline font-weight-lighter text-white"></h1>
-                <div class="typed-text d-none">Web Designer, Web Developer, Front End Developer, Apps Designer, Apps
-                    Developer</div>
-                <div class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
-
-
-                </div>
-            </div>
+      <div class="position-relative d-flex align-items-center justify-content-center section-title">
+        <h1 class="display-1 text-uppercase shadow-word">About</h1>
+        <h1 class="position-absolute text-uppercase text-primary">About Me</h1>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-5 pb-4 pb-lg-0">
+          <img class="img-fluid rounded w-100" src="images/ozzwork.jpg" alt="On-site photo" />
         </div>
+        <div class="col-lg-7">
+          <h3 class="mb-4">Electrician & Mechanical Engineering Student</h3>
+          <p>
+            John is a third-year mechanical engineering student at the University of Waterloo, with a certification as an industrial/construction electrician. He developed his skills at Ozz Electric, where he gained substantial practical experience in electrical work. His professional experience includes analyzing Invitation for Construction (IFC) and tender drawings, and participating in construction projects like
+            <a href="https://www.matcon.ca/project/tower-3-brentwood-mall" target="_blank">Brentwood Tower 3 & 4.</a>
+            Additionally, John was involved in the building and design of a modern house, acquiring knowledge in standard house framing, overhead service installation, solar panel and wind turbine setups, as well as general wiring tasks. As a founding member of ClearOne Innovators, he aims to be involved in collaborative projects, improve the website, and acquire valuable experience for his future endeavors.
+          </p>
+        </div>
+      </div>
     </div>
-</div>
-<!-- Header End -->
+  </section>
 
+  <!-- EDUCATION -->
+  <section class="container py-4 edu-section" id="education">
+    <h3 class="mb-3">Education</h3>
 
-<!-- About Start -->
-<div class="container-fluid py-5" id="about">
+    <!-- Waterloo -->
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="mb-1">B.ASc. Mechanical Engineering (Co-op)</h5>
+        <div class="edu-meta">University of Waterloo · Sep 2023 – Jun 2028 · Waterloo, ON</div>
+      </div>
+    </div>
+
+    <!-- Camosun College -->
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="mb-1">Electrician License (Industrial & Construction Certified)</h5>
+        <div class="edu-meta">Camosun College · Sep 2022 – Feb 2023</div>
+        <ul class="edu-bullets mt-2">
+          <li>Activities: Solar/Wind installs, overhead service, electric heater, lighting/switches, doorbells.</li>
+          <li>Skills: Integrated Circuits (IC), Canadian Electrical Code (CEC), Electrical Wiring.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Heritage Woods Secondary -->
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="mb-1">High School Diploma</h5>
+        <div class="edu-meta">Heritage Woods Secondary School · Sep 2019 – Jun 2022</div>
+        <ul class="edu-bullets mt-2">
+          <li>Activities: Syntechs Robotics Club, String Orchestra (Violin), Movie & Visualization Club, Table Tennis.</li>
+          <li>Graduated early to train/obtain Construction/Industrial Electrician license at Camosun College.</li>
+          <li>Skills: C++, Violin, CAD.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE (titles/dates per résumé) -->
+  <section class="container py-4 exp-section" id="experience">
+    <h3 class="mb-3">Experience</h3>
+
+    <!-- Metro Vancouver -->
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="mb-1">Mechanical Project Engineer Intern</h5>
+        <div class="exp-meta">Metro Vancouver · Jan 2025 – Aug 2025 · Vancouver, BC</div>
+        <ul class="exp-bullets mt-2">
+          <li>Pre-design support for the <b>$10B</b> Iona Island WWTP, including RNG Facility replacing cogen with boilers (energy efficiency ↑ ~500%).</li>
+          <li>Deputy lead for influent velocity measurement; supervised flow probing on site.</li>
+          <li>Led 1200 HP DC→AC motor upgrade (VFD-driven AC, transformer integration, IGBT-based control).</li>
+          <li>Procurement across 90+ contracts; coordinated scopes with ABB, Caterpillar, WEG and internal teams.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Baja SAE -->
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="mb-1">Dynamics CAD Member</h5>
+        <div class="exp-meta">Baja SAE Off-Road Vehicle Design · Sep 2024 – Apr 2025 · Waterloo, ON</div>
+        <ul class="exp-bullets mt-2">
+          <li>Front suspension manufacturing workflow (tubing, welding, CNC, jigging for alignment/QA).</li>
+          <li>Gearbox & CVT casing design review in SOLIDWORKS; focused on manufacturability and in-house production.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- TTC -->
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="mb-1">Automation Developer Intern</h5>
+        <div class="exp-meta">Toronto Transit Commission (TTC) · May 2024 – Aug 2024 · Toronto, ON</div>
+        <ul class="exp-bullets mt-2">
+          <li>MPS analytics (MATLAB/VBA) for 500+ projects → ~30% faster PM decisions.</li>
+          <li>Python + ADO + Matplotlib work-tracking log; insights cut calls and ~<b>$5M</b> in project costs.</li>
+          <li>Automated publishing to PM Dashboard (8 hours → 20 seconds).</li>
+          <li><b>Outstanding Achievement</b> (Innovation/Creativity) — 2 of 500 co-ops.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Accelerate AI -->
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="mb-1">AI/ML Software Engineer Intern</h5>
+        <div class="exp-meta">Accelerate AI · Jun 2024 – Aug 2024 · Toronto, ON</div>
+        <ul class="exp-bullets mt-2">
+          <li>Healthcare voice agent (Dialogflow) with Journey voice via Node.js + Twilio.</li>
+          <li>Real-estate chatbot in Python (LangChain) with knowledge base; flows & diagrams for clients.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Ozz Electric & SkilledTradesBC -->
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="mb-1">Electrician Apprentice</h5>
+        <div class="exp-meta">Ozz Electric & SkilledTradesBC · Feb 2023 – Jul 2023 · Vancouver/Burnaby, BC</div>
+        <ul class="exp-bullets mt-2">
+          <li>Integrated wind/solar; installed 200-amp overhead service, panels, receptacles, lighting.</li>
+          <li>Installed 200+ electrical components for Brentwood Towers (CEC compliant).</li>
+          <li>Blueprint restructuring for optimal placement; improved structural stability ~40%.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS (from résumé, with Mechanical/Vehicle emphasis) -->
+  <section class="container-fluid py-5" id="skill">
     <div class="container">
-        <div class="position-relative d-flex align-items-center justify-content-center">
-            <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #ffffff;">About</h1>
-            <h1 class="position-absolute text-uppercase text-primary">About Me</h1>
+      <div class="position-relative d-flex align-items-center justify-content-center section-title">
+        <h1 class="display-1 text-uppercase shadow-word">Skills</h1>
+        <h1 class="position-absolute text-uppercase text-primary">My Skills</h1>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <h5 class="mb-2">Mechanical & Vehicle</h5>
+          <ul class="skills-list">
+            <li><span class="skill-tag">Suspension fabrication</span> tubing, welding, CNC, jigging</li>
+            <li><span class="skill-tag">Gearbox/CVT casing</span> design review (manufacturability)</li>
+            <li><span class="skill-tag">Power electronics</span> VFD integration, IGBTs (DC→AC upgrades)</li>
+            <li><span class="skill-tag">Shop fabrication</span> fit-up, QA, assembly</li>
+          </ul>
+
+          <h5 class="mt-4 mb-2">CAD / Simulation</h5>
+          <p>SolidWorks, CATIA, AutoCAD, SAP2000, OnShape, Revit, Excel</p>
         </div>
-        <div class="row align-items-center">
-            <div class="col-lg-5 pb-4 pb-lg-0">
-                <img class="img-fluid rounded w-100" src="images/ozzwork.jpg" alt="">
-            </div>
-            <div class="col-lg-7">
-                <h3 class="mb-4">Electrician & Mechanical Engineering Student</h3>
-                <p>
 
-                    John is a first-year mechanical engineering student at the University of Waterloo, with a certification as an industrial/construction electrician. He developed his skills at Ozz Electric, where he gained substantial practical experience in electrical work. His professional experience includes analyzing Invitation for Construction (IFC) and tender drawings, and participating in construction projects like <a
-                    href="https://www.matcon.ca/project/tower-3-brentwood-mall" target="_blank">Brentwood Tower 3 &
-                    4. </a> Additionally, John was involved in the building and design of a modern house, acquiring knowledge in standard house framing, overhead service installation, solar panel and wind turbine setups, as well as general wiring tasks. As a founding member of ClearOne Innovators, he aims to be involved in collaborative projects, improve the website, and acquire valuable experience for his future endeavors.</p>
-                <div class="row mb-3">
+        <div class="col-lg-6">
+          <h5 class="mb-2">Programming</h5>
+          <p>C/C++, Python, JavaScript, VBA, MATLAB, HTML, CSS, Go</p>
 
-                </div>
-            </div>
+          <h5 class="mt-4 mb-2">Tools / Frameworks</h5>
+          <p>Node.js, Twilio, Dialogflow CX, Vapi, Cloud SDK, LangChain, Pandas</p>
+
+          <h5 class="mt-4 mb-2">Certifications</h5>
+          <p>Licensed Electrician, Google PM, Industrial Biotechnology, Standard First Aid, Food Safe</p>
         </div>
-        <!-- About End -->
-
-
-        <!-- Qualification Start -->
-        <div class="container-fluid py-5" id="qualification">
-            <div class="container">
-                <div class="position-relative d-flex align-items-center justify-content-center">
-                    <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #ffffff;">Quality
-                    </h1>
-                    <h1 class="position-absolute text-uppercase text-primary">Education & Experience</h1>
-                </div>
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <h3 class="mb-4">My Education</h3>
-                        <div class="border-left border-primary pt-2 pl-4 ml-2">
-                            <div class="position-relative mb-4">
-                                <i class="far fa-dot-circle text-primary position-absolute"
-                                    style="top: 2px; left: -32px;"></i>
-                                <h5 class="font-weight-bold mb-1">B. ASc. in Mechanical Engineering Honours Co-op</h5>
-                                <p class="mb-2"><strong>University of Waterloo</strong> | <small>2023 - 2028</small></p>
-                                <p>Focused on fundamentals for engineering graphical communication through computer-aided design (CAD). Gained hands on experience in surveying, designing and site planning. Worked with total station, automatic level and levelling rod. Program courses
-                                    include Calculus, Physics, Chemistry, English, Linear Algebra and Mechanics.<br><br><b>Current Weighted GPA: 4.0</b></p>
-                            </div>
-                            <div class="position-relative mb-4">
-                                <i class="far fa-dot-circle text-primary position-absolute"
-                                    style="top: 2px; left: -32px;"></i>
-                                <h5 class="font-weight-bold mb-1">Electrician Apprentice</h5>
-                                <p class="mb-2"><strong>Charles Best Secondary School/Camosun College</strong> |
-                                    <small>2023</small></p>
-                                <p>Completed Level 1 training as an electrician. Worked with receptacles, doorbells,
-                                    switches, lights, general wiring, overhead service etc. Able to perform electrical
-                                    related tasks.</p>
-                            </div>
-                            <div class="position-relative mb-4">
-                                <i class="far fa-dot-circle text-primary position-absolute"
-                                    style="top: 2px; left: -32px;"></i>
-                                <h5 class="font-weight-bold mb-1">Highschool Diploma</h5>
-                                <p class="mb-2"><strong>Heritage Woods Secondary School</strong> | <small>2019 -
-                                        2023</small></p>
-                                <p>Outstanding Student in Calculus, Physics and Chemsitry. Executive member of the
-                                    highschool Syntechs Robotics Club. Placed second place for <i>Tower Takeover-</i> BC
-                                    Provincial <a href="https://www.vexrobotics.com/competition" target="_blank">VEX
-                                        Robotics Competition. </a>Built robots that can stack 15x15x15cm cubes up to 2
-                                    meters and throw frisbees into goals. Programmed a PID (Autocorrecting) system in C++ for
-                                    distance and inertial sensors where the robot balances itself on a balancing
-                                    platform.
-                                    <br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp; <br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp; <br>&nbsp;<br>&nbsp;<br>&nbsp;
-                                 </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <h3 class="mb-4">My Experience</h3>
-                        <div class="border-left border-primary pt-2 pl-4 ml-2">
-                    
-                            <div class="position-relative mb-4">
-                                <i class="far fa-dot-circle text-primary position-absolute"
-                                    style="top: 2px; left: -32px;"></i>
-                                <h5 class="font-weight-bold mb-1">Design & Construction Member</h5>
-                                <p class="mb-2"><strong>UW Steel Bridge Design Team</strong> | <small>Sep 2023 - Present</small></p>
-                                <p>Participating in the 2024 and 2025 steel bridge competitions. Skills include CAD, steel structures, and shop fabrication.</p>
-                            </div>
-                    
-                            <div class="position-relative mb-4">
-                                <i class="far fa-dot-circle text-primary position-absolute"
-                                    style="top: 2px; left: -32px;"></i>
-                                <h5 class="font-weight-bold mb-1">Construction Coordinator - Software Automation Developer</h5>
-                                <p class="mb-2"><strong>Toronto Transit Commission (TTC)</strong> | <small>Jun 2024 - Aug 2024</small></p>
-                                <p>Automated MPS file comparison software, created a live-progress tracker, and developed workflow duration software.</p>
-                            </div>
-                    
-                            <div class="position-relative mb-4">
-                                <i class="far fa-dot-circle text-primary position-absolute"
-                                    style="top: 2px; left: -32px;"></i>
-                                <h5 class="font-weight-bold mb-1">Software Engineer Intern</h5>
-                                <p class="mb-2"><strong>Accelerate AI</strong> | <small>Jun 2024 - Aug 2024</small></p>
-                                <p>Developed AI healthcare voice agents and real estate chatbots. Integrated custom Journey voices using Node.js and Twilio.</p>
-                            </div>
-                    
-                            <div class="position-relative mb-4">
-                                <i class="far fa-dot-circle text-primary position-absolute"
-                                    style="top: 2px; left: -32px;"></i>
-                                <h5 class="font-weight-bold mb-1">Mechanical Builder and Programmer</h5>
-                                <p class="mb-2"><strong>UW VEX U Design Team</strong> | <small>Oct 2023 - May 2024</small></p>
-                                <p>Built custom pneumatic tanks and contributed to programming the Over and Under robot.</p>
-                            </div>
-                    
-                            <div class="position-relative mb-4">
-                                <i class="far fa-dot-circle text-primary position-absolute"
-                                    style="top: 2px; left: -32px;"></i>
-                                <h5 class="font-weight-bold mb-1">Industrial Electrician & Structural Analyst</h5>
-                                <p class="mb-2"><strong>SkilledTradesBC</strong> | <small>Feb 2023 - Jun 2023</small></p>
-                                <p>Coordinated ITA project to build a home for the elderly, improved blueprint stability by 40%, and integrated wind and solar power systems.</p>
-                            </div>
-                    
-                            <div class="position-relative mb-4">
-                                <i class="far fa-dot-circle text-primary position-absolute"
-                                    style="top: 2px; left: -32px;"></i>
-                                <h5 class="font-weight-bold mb-1">Apprentice Electrician</h5>
-                                <p class="mb-2"><strong>Ozz Electric</strong> | <small>Jun 2023 - Jul 2023</small></p>
-                                <p>Installed 200+ electrical components at Brentwood Towers, ensuring compliance with CEC. Reviewed tender and electrical drawings, collaborating closely with the foreman.</p>
-                            </div>
-                    
-                            <div class="position-relative mb-4">
-                                <i class="far fa-dot-circle text-primary position-absolute"
-                                    style="top: 2px; left: -32px;"></i>
-                                <h5 class="font-weight-bold mb-1">Teaching Assistant</h5>
-                                <p class="mb-2"><strong>The Greater Vancouver Korean Language School</strong> | <small>Sep 2021 - Jun 2022</small></p>
-                                <p>Taught Korean fundamentals to 30+ students and prepared them for the Vancouver Korean Speech Contest.</p>
-                            </div>
-                    
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-        <!-- Qualification End -->
-
-
-        <!-- Skill Start -->
-        <div class="container-fluid py-5" id="skill">
-            <div class="container">
-                <div class="position-relative d-flex align-items-center justify-content-center">
-                    <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #ffffff;">Skills
-                    </h1>
-                    <h1 class="position-absolute text-uppercase text-primary">My Skills</h1>
-                </div>
-                <div class="row align-items-center">
-
-
-                    <ul>
-                        <li style="font-size: 20px; color:#666970;"><b>Certifications:</b> Construction/Industrial
-                            Electrician, Standard First Aid with CPR C/AED, Foods Safe </li>
-                        <p>
-
-                        </p>
-                        <li style="font-size: 20px; color:#666970;"><b>Softwares:</b> AutoCAD, Civil 3D, SOLIDWORKS,
-                            OnShape, Infraworks, Revit</li>
-                            <p>
-                            
-                            </p>
-                        <li style="font-size: 20px; color:#666970;"><b>Programming Languages:</b> C++, C, MATLAB, Python, HTML,
-                            CSS, JavaScript</li>
-
-                    </ul>
-
-
-
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
-    <!-- Skill End -->
+  </section>
 
+  <!-- PORTFOLIO PREVIEW (expanded) -->
+  <section class="container-fluid pt-5 pb-3" id="portfolio">
+    <div class="container">
+      <div class="position-relative d-flex align-items-center justify-content-center section-title">
+        <h1 class="display-1 text-uppercase shadow-word">Gallery</h1>
+        <h1 class="position-absolute text-uppercase text-primary">My Projects</h1>
+      </div>
 
-
-
-    <!-- Portfolio Start -->
-    <div class="container-fluid pt-5 pb-3" id="portfolio">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #ffffff;">Gallery</h1>
-                <h1 class="position-absolute text-uppercase text-primary">My Projects</h1>
+      <div class="row portfolio-container">
+        <!-- Add as many as you like; these link to details or projects page -->
+        <div class="col-lg-4 col-md-6 mb-4 portfolio-item">
+          <div class="position-relative overflow-hidden mb-2 rounded">
+            <img class="img-fluid rounded w-100 project-img" src="images/wegmotorvfd.png" alt="WEG VFD Motor" />
+            <div class="portfolio-btn d-flex align-items-center justify-content-center rounded">
+              <a href="wegmotor.html"><i class="fa fa-plus text-white" style="font-size:60px;"></i></a>
             </div>
-
-            <div class="row portfolio-container">
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="images/framing.png" alt="">
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="framing.html">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="images/bioretentionmodel.png" alt="">
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="bioretention.html">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="images/rubixcube1.jpg" alt="">
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="rubix.html">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
-                        </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="images/medicine.png" alt="">
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="medicine.html">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-5 col-md-6 mb-4 portfolio-item second">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="images/hhh.png" alt="">
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="hhh.html">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
+          </div>
         </div>
+
+        
+
+        <div class="col-lg-4 col-md-6 mb-4 portfolio-item">
+          <div class="position-relative overflow-hidden mb-2 rounded">
+            <img class="img-fluid rounded w-100 project-img" src="images/pneumatictank.png" alt="Robotics Pneumatic System" />
+            <div class="portfolio-btn d-flex align-items-center justify-content-center rounded">
+              <a href="pneumatics.html"><i class="fa fa-plus text-white" style="font-size:60px;"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 portfolio-item">
+          <div class="position-relative overflow-hidden mb-2 rounded">
+            <img class="img-fluid rounded w-100 project-img" src="images/rubixcube1.jpg" alt="Rubik's Cube Solver" />
+            <div class="portfolio-btn d-flex align-items-center justify-content-center rounded">
+              <a href="rubix.html"><i class="fa fa-plus text-white" style="font-size:60px;"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 portfolio-item">
+          <div class="position-relative overflow-hidden mb-2 rounded">
+            <img class="img-fluid rounded w-100 project-img" src="images/earthquake.png" alt="Seismic Sensor Demo" />
+            <div class="portfolio-btn d-flex align-items-center justify-content-center rounded">
+              <a href="#"><i class="fa fa-plus text-white" style="font-size:60px;"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 portfolio-item">
+          <div class="position-relative overflow-hidden mb-2 rounded">
+            <img class="img-fluid rounded w-100 project-img" src="images/trophydesign.png" alt="CNSBC Trophy" />
+            <div class="portfolio-btn d-flex align-items-center justify-content-center rounded">
+              <a href="cnsbctrophy.html"><i class="fa fa-plus text-white" style="font-size:60px;"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 portfolio-item">
+          <div class="position-relative overflow-hidden mb-2 rounded">
+            <img class="img-fluid rounded w-100 project-img" src="images/medicine.png" alt="Medicine Tracker" />
+            <div class="portfolio-btn d-flex align-items-center justify-content-center rounded">
+              <a href="medicine.html"><i class="fa fa-plus text-white" style="font-size:60px;"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 portfolio-item">
+          <div class="position-relative overflow-hidden mb-2 rounded">
+            <img class="img-fluid rounded w-100 project-img" src="images/hhh.png" alt="Hagey Harmony Homes" />
+            <div class="portfolio-btn d-flex align-items-center justify-content-center rounded">
+              <a href="hhh.html"><i class="fa fa-plus text-white" style="font-size:60px;"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 portfolio-item">
+          <div class="position-relative overflow-hidden mb-2 rounded">
+            <img class="img-fluid rounded w-100 project-img" src="images/bioretentionmodel.png" alt="Bioretention Model" />
+            <div class="portfolio-btn d-flex align-items-center justify-content-center rounded">
+              <a href="bioretention.html"><i class="fa fa-plus text-white" style="font-size:60px;"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center">
+        <a class="btn btn-outline-primary" href="projects.html">See all projects</a>
+      </div>
     </div>
-    <!-- Portfolio End -->
+  </section>
 
-    <!-- info section -->
-    <section class="info_section layout_padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="info-logo">
-                        <h2>
-                            ClearOne
-                        </h2>
-                        <p>
-                            We make things clear, and unify into one.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="info-nav">
-                        <h4>
-                            Navigation
-                        </h4>
-                        <ul>
-                            <li>
-                                <a href="index.html">
-                                    Home
-                                </a>
-                            </li>
-                            <li>
-                                <a href="ourteam.html">
-                                    Our Team
-                                </a>
-                            </li>
-                            <li>
-                                <a href="projects.html">
-                                    Projects
-                                </a>
-                            </li>
-                            <li>
-                                <a href="contact.html">
-                                    Contact Us
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="info-contact">
-                        <h4>
-                            Contact Info
-                        </h4>
-                        <div class="location">
-                            <h6>
-                                Address:
-                            </h6>
-
-                            <img src="images/location.png" alt="">
-                            <span>
-                                200 University Avenue W, Waterloo, ON, N2L 3G1
-                            </span>
-                            </a>
-                        </div>
-                        <div class="call">
-                            <h6>
-                                Call:
-                            </h6>
-
-                            <img src="images/telephone.png" alt="">
-                            <span>
-                                (+1 778 222 7753)
-                            </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="discover">
-                        <h4>
-                            Discover
-                        </h4>
-
-                        <div class="social-box">
-                            <a href="https://www.instagram.com/clearone_innovators/" target="_blank">
-                                <img src="images/instagram2.png" width="40" height="40" alt="instagram">
-                            </a>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <!-- Info -->
+  <section class="info_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="info-logo">
+            <h2>ClearOne</h2>
+            <p>We make things clear, and unify into one.</p>
+          </div>
         </div>
-    </section>
+        <div class="col-md-3">
+          <div class="info-nav">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="johnchoi.html">Home</a></li>
+              <li><a href="ourteam.html">Our Team</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="info-contact">
+            <h4>Contact Info</h4>
+            <div class="location">
+              <h6>Address:</h6>
+              <img src="images/location.png" alt="">
+              <span>200 University Avenue W, Waterloo, ON, N2L 3G1</span>
+            </div>
+            <div class="call">
+              <h6>Call:</h6>
+              <img src="images/telephone.png" alt="">
+              <span>(+1 778 222 7753)</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="discover">
+            <h4>Discover</h4>
+            <div class="social-box">
+              <a href="https://www.instagram.com/clearone_innovators/" target="_blank">
+                <img src="images/instagram2.png" width="40" height="40" alt="instagram" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Footer -->
+  <section class="container-fluid footer_section">
+    <p>
+      Copyright &copy; 2023-2024 All Rights Reserved By
+      <a href="johnchoi.html"><b>John Choi</b></a>
+    </p>
+  </section>
 
-
-    <!-- end info_section -->
-
-    <!-- footer section -->
-    <section class="container-fluid footer_section">
-        <p>
-            Copyright &copy; 2023-2024 All Rights Reserved By
-            <a href="johnchoi.html"><b>Jeongyun (john) Choi</b></a>
-        </p>
-    </section>
-    <!-- footer section -->
-
-    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.9/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    </body>
-
+  <!-- Scripts -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.9/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
 </html>

@@ -1,20 +1,14 @@
-
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
   <!-- Basic -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <!-- Mobile Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
 
-  <title>ClearOne</title>
-  <link rel="icon" type="image/png" href="images/clearonelogo.png" >
+  <title>ClearOne — Projects</title>
+  <link rel="icon" type="image/png" href="images/clearlogo.png" >
 
   <!-- slider stylesheet -->
   <link rel="stylesheet" type="text/css"
@@ -23,42 +17,85 @@
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 
-  <!-- fonts style -->
+  <!-- fonts -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:400,700&display=swap" rel="stylesheet">
-  <!-- Custom styles for this template -->
+
+  <!-- site styles -->
   <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
-  <link href="css/custom.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet" />
+
   <style>
-    @media (max-width: 767px) {
-        .about .container-fluid .row .col-lg-6 .about-box,
-        .about .container-fluid .row .col-lg-6 .about-box2 {
-            margin-bottom: 5px !important; /* Reducing bottom margin */
-            padding-bottom: 5px !important; /* Reducing bottom padding */
-        }
-    
-        .about .container-fluid .row .col-lg-6 .about-box2 p {
-            margin-top: 0 !important; /* Removing top margin for 'Developed by' paragraph */
-        }
-    
-        .about .container-fluid .row .col-lg-6 .about-box_img {
-            margin-top: 5px !important; /* Reducing top margin above the image */
-        }
+    /* Clean card grid */
+    .projects-grid .card {
+      border: 0;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+      transition: transform .2s ease, box-shadow .2s ease;
     }
-    </style>
+    .projects-grid .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 28px rgba(0,0,0,0.1);
+    }
+    .projects-grid .card-img-top {
+      object-fit: cover;
+      height: 180px;
+    }
+    .projects-grid .card-title {
+      margin-bottom: .25rem;
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+    .projects-grid .byline {
+      font-size: .875rem;
+      color: #6c757d;
+      margin-bottom: .75rem;
+    }
+    .projects-grid .btn {
+      border-radius: .75rem;
+      padding: .5rem .9rem;
+    }
+
+    /* Section header – tuned to site fonts */
+    .section-header {
+      margin: 2rem 0 1rem;
+      text-align: center;
+    }
+    .section-header h2 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.6rem, 2vw + .6rem, 2.2rem);
+      letter-spacing: .5px;
+      color: #222;
+      margin-bottom: .25rem;
+    }
+    .section-header p {
+      font-family: 'Roboto', sans-serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: #6c757d;
+      margin-bottom: 0;
+    }
+
+    /* Fix navbar toggler icon visibility with Bootstrap 4 */
+    .custom_nav-container.navbar.navbar-expand-lg .navbar-toggler {
+      border: none;
+    }
+    .navbar-light .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%280,0,0,.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+  </style>
 </head>
 
-<body>
+<body class="projects-page">
   <div class="hero_area">
-    <!-- header section strats -->
+    <!-- header -->
     <header class="header_section">
       <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg custom_nav-container ">
+        <nav class="navbar navbar-expand-lg navbar-light custom_nav-container">
           <a class="navbar-brand" href="index.html">
-            <span>
-              ClearOne
-            </span>
+            <span>ClearOne</span>
           </a>
           <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -68,19 +105,11 @@
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
-              <ul class="navbar-nav  ">
-                <li class="nav-item">
-                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="ourteam.html"> Our Team </a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="projects.html"> Projects </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Contact Us</a>
-                </li>
+              <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="ourteam.html">Our Team</a></li>
+                <li class="nav-item active"><a class="nav-link" href="projects.html">Projects <span class="sr-only">(current)</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
               </ul>
             </div>
           </div>
@@ -88,382 +117,206 @@
         </nav>
       </div>
     </header>
-    <!-- end header section -->
-    <div id="about" class="about">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-            <div class="about-box" style="margin-bottom: 10px; padding-bottom: 10px;">
-              <h3>Hagey Harmony Homes</h3>
-              <p>
-                The University of Waterloo, established in 1959 in Ontario, currently enrolls about 40,000 students across its campuses in Waterloo, Cambridge, Kitchener, and Stratford. Its main campus boasts eight student residences, complemented by additional housing at affiliated colleges. With a 12% increase in enrollment over the past five years, there's a growing need for visitor accommodation. In planning a new residence near the Minota Hagey Residence, we considered feedback from upper-year students about the area's challenges. A primary concern is the frequent speeding on Ring Road and the MHR access road, causing noise disturbances, particularly problematic during late evening hours. <b>To address this, the Hagey Harmony House is designed to provide a peaceful stay for up to five families in a 400 square meter facility, focusing on privacy and comfort.</b> Additionally, to curb the speeding issue and reduce noise, speed bumps are planned for the surrounding roads.
-                </p>
-            </div>
-            <div class="about-box2" style="margin-bottom: 5px; padding-bottom: 5px;">
-    <p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p>
-  
-              <p><b>Developed by:</b> <a href="johnchoi.html"><b>Jeongyun Choi, </b></a><a href="ethangomes.html"><b>Ethan Gomes, </b></a><a href="henryho.html"><b>Henry Ho</b></a></p>
-            </div>
-            <div class="about-box" style="margin-bottom: 10px;">
-              <a href="hhh.html">View Project</a>
+    <!-- end header -->
+
+    <!-- Projects Grid -->
+    <main class="py-4 mt-4 pt-3">
+
+      <div class="container">
+        <div class="section-header">
+          <h2>Projects</h2>
+          <p>A quick look at what we’ve built.</p>
+        </div>
+
+        <div class="row projects-grid">
+          <!-- ROW 1: Robotics & Mech/Electrical -->
+                     <!-- ROW 2: Motors & Dynamics -->
+          <!-- NEW: WEG Motor Project -->
+          <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex">
+            <div class="card w-100 h-100">
+              <img src="images/wegmotorvfd.png" class="card-img-top" alt="WEG VFD Motor">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">VFD-Optimized Motor</h5>
+                <div class="byline">By <a href="johnchoi.html">John Choi</a></div>
+                <a href="wegmotor.html" class="btn btn-primary mt-auto">View Project</a>
+              </div>
             </div>
           </div>
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 padding_rl" style="padding-top: 5px;">
-            <div class="about-box_img">
-              <figure><img src="images/hhh.png" alt="#" style="width:98%; height:auto;" /></figure>
+
+          <!-- EV3 Rubik’s Cube Solver -->
+          <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex">
+            <div class="card w-100 h-100">
+              <img src="images/rubixcube1.jpg" class="card-img-top" alt="EV3 Rubik’s Cube Solver">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Rubik’s Cube Solver</h5>
+                <div class="byline">By <a href="johnchoi.html">John Choi</a>, Evan McIntyre, Tanay Mehta, Edam Jin</div>
+                <a href="rubix.html" class="btn btn-primary mt-auto">View Project</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Specialized Pneumatic System (VEX) -->
+          <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex">
+            <div class="card w-100 h-100">
+              <img src="images/pneumatictank1.png" class="card-img-top" alt="Specialized Pneumatic System">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Robotics Pneumatic System</h5>
+                <div class="byline">By <a href="johnchoi.html">John Choi</a>, Leo Xie, Sam Huang</div>
+                <a href="pneumatics.html" class="btn btn-primary mt-auto">View Project</a>
+              </div>
+            </div>
+          </div>
+          <!-- ROW 3: Design & Software & Practical -->
+          <!-- CNSBC Trophy Design -->
+          <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex">
+            <div class="card w-100 h-100">
+              <img src="images/trophydesign.png" class="card-img-top" alt="CNSBC Trophy Design">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">CNSBC Trophy Design</h5>
+                <div class="byline">By <a href="johnchoi.html">John Choi</a></div>
+                <a href="cnsbctrophy.html" class="btn btn-primary mt-auto">View Project</a>
+              </div>
+            </div>
+          </div>
+
+<!-- NEW: ABB Motor Project -->
+<div class="col-12 col-md-6 col-lg-4 mb-4 d-flex">
+  <div class="card w-100 h-100">
+    <img src="images/abbwatermotor.png" class="card-img-top" alt="ABB Water-Cooled Motor">
+    <div class="card-body d-flex flex-column">
+      <h5 class="card-title">ABB Water-Cooled Motor (EPS Pumps)</h5>
+      <div class="byline">By <a href="johnchoi.html">John Choi</a> with ABB Engineers</div>
+      <a href="docs/abbmotor.pdf" target="_blank" rel="noopener" class="btn btn-primary mt-auto">
+        View Project
+      </a>
+    </div>
+  </div>
+</div>
+
+
+
+          <!-- Seismic Sensor + Demo Model -->
+          <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex">
+            <div class="card w-100 h-100">
+              <img src="images/earthquake.png" class="card-img-top" alt="Seismic Sensor + Building Demo">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Seismic Sensor + Demo Model</h5>
+                <div class="byline">By <a href="johnchoi.html">John Choi</a>, <a href="ethangomes.html">Ethan Gomes</a>, <a href="henryho.html">Henry Ho</a>, Quitze Bracho-Maganda</div>
+                <a href="#" class="btn btn-primary mt-auto" aria-disabled="true">In Progress</a>
+              </div>
+            </div>
+          </div>
+
+
+
+          <!-- Medicine Tracking Software -->
+          <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex">
+            <div class="card w-100 h-100">
+              <img src="images/medicine.png" class="card-img-top" alt="Medicine Tracking Software">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Medicine Tracking Software</h5>
+                <div class="byline">By <a href="johnchoi.html">John Choi</a></div>
+                <a href="medicine.html" class="btn btn-primary mt-auto">View Project</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Framing & Electrical Wiring -->
+          <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex">
+            <div class="card w-100 h-100">
+              <img src="images/framing.png" class="card-img-top" alt="Framing & Electrical Wiring">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Framing & Electrical Wiring</h5>
+                <div class="byline">By <a href="johnchoi.html">John Choi</a></div>
+                <a href="framing.html" class="btn btn-primary mt-auto">View Project</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ROW 4: Broader work (kept last) -->
+          <!-- Hagey Harmony Homes -->
+          <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex">
+            <div class="card w-100 h-100">
+              <img src="images/hhh.png" class="card-img-top" alt="Hagey Harmony Homes">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Hagey Harmony Homes</h5>
+                <div class="byline">By <a href="johnchoi.html">John Choi</a>, <a href="ethangomes.html">Ethan Gomes</a>, <a href="henryho.html">Henry Ho</a></div>
+                <a href="hhh.html" class="btn btn-primary mt-auto">View Project</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bioretention Physical Model -->
+          <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex">
+            <div class="card w-100 h-100">
+              <img src="images/bioretentionmodel.png" class="card-img-top" alt="Bioretention Model">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Bioretention Physical Model</h5>
+                <div class="byline">By <a href="johnchoi.html">John Choi</a>, <a href="ethangomes.html">Ethan Gomes</a>, <a href="henryho.html">Henry Ho</a></div>
+                <a href="bioretention.html" class="btn btn-primary mt-auto">View Project</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- City of Delta Parking Lot -->
+          <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex">
+            <div class="card w-100 h-100">
+              <img src="images/siteplan_page-0001.jpg" class="card-img-top" alt="City of Delta Parking Lot">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">City of Delta Parking Lot (Approved)</h5>
+                <div class="byline">By <a href="henryho.html">Henry Ho</a></div>
+                <a href="deltaproject.html" class="btn btn-primary mt-auto">View Project</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </main>
+    <!-- /Projects Grid -->
 
-
-    <div id="about" class="about">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-            <div class="about-box" style="margin-bottom: 10px; padding-bottom: 10px;">
-              <h3>ECO-FRIENDLY BIORETENTION PHYSICAL MODEL</h3>
-              <p>
-                Marine creatures are facing increasing threats from pollutants such as microplastics, oil spills, steel debris, and acidic water, all of which have detrimental effects on their health and ecosystems. These contaminants not only disrupt the delicate balance of marine life but also pose a significant risk to the overall well-being of aquatic environments. In response to these challenges, <b>the ClearOne team has researched and produced a physical model to reduce the impact of harmful substances on marine life.</b> The project involves the development of a physical bioretention model designed to filter out pollutants from water, ensuring that the resulting filtered water is safe for marine creatures. This innovative solution aims to safeguard the marine environment, promoting the conservation of biodiversity and the sustainability of aquatic ecosystems. 
-                In conclusion, the development of a physical bioretention model provides a promising solution to counteract the negative impacts of water pollutants on marine creatures, offering a vital step towards preserving aquatic ecosystems and ensuring the well-being of marine life.
-              </a>
-              </p>
-              </p>
-            </div>
-            <div class="about-box2" style="margin-bottom: 5px; padding-bottom: 5px;">
-    <p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p>
-  
-              <p><b>Developed by:</b> <a href="johnchoi.html"><b>Jeongyun Choi, </b></a><a href="ethangomes.html"><b>Ethan Gomes, </b></a><a href="henryho.html"><b>Henry Ho</b></a></p>
-            </div>
-            <div class="about-box" style="margin-bottom: 10px;">
-              <a href="bioretention.html">View Project</a>
-            </div>
-          </div>
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 padding_rl" style="padding-top: 5px;">
-            <div class="about-box_img">
-              <figure><img src="images/bioretentionmodel.png" alt="#" style="width:98%; height:auto;" /></figure>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-
-
-    <div id="about" class="about">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-            <div class="about-box" style="margin-bottom: 10px; padding-bottom: 10px;">
-              <h3>city of Delta Parking Lot design (Approved)</h3>
-              <p>This project was made with the City of Delta's Design and Construction Division, adhering to Delta City bylaws and the MMCD manual's design guidelines. This parking lot expansion adds over 50 new parking spaces and a new entrance while reserving additional spaces in the original lot to accommodate accessible parking and EV chargers. The project consists of 6 sheets in total with a site plan, 2 plan and profiles, and 3 cross sections. Additionally, a class C tender estimate was produced for this design, totaling up to $400,000. Features of this parking lot include 300mm of open graded 75mm minus crushed granular subbase @ 95% M.P.D, 100mm of 19mm minus crushed granular base @ 95% M.P.D, and 65mm of hot-mix asphalt lower course #2, 150mm extruded barrier curbs keyed into the asphalt, and 1 streetlight. Additional factors such as project identification signage, tree removals and root barriers, excavation, backfilling, painting, laying sod, and landscaping were accounted for in construction costs. Ultimately, this project will minimize clutter in the existing lot and prevent Delta employee's vehicles from spilling onto the street to look for parking.</p>
-              <p>This project is conducted through: <a href="https://www.delta.ca/" target="_blank" class="no-background-no-outline2">
-                <img src="images/delta.jpg" width="250" height="180" >
-              </a></p>
-            </div>
-            <div class="about-box2" style="margin-bottom: 5px; padding-bottom: 5px;">
-              <p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p>
-              <p><b>Developed by:</b> <a href="henryho.html"><b>Henry Ho</b></a></p>
-            </div>
-            <div class="about-box" style="margin-bottom: 10px;">
-              <a href="deltaproject.html">View Project</a>
-            </div>
-          </div>
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 padding_rl" style="padding-top: 5px;">
-            <div class="about-box_img">
-              <figure><img src="images/siteplan_page-0001.jpg" alt="#" style="width:98%; height:auto;" /></figure>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-
-
-    <div id="about" class="about">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-            <div class="about-box" style="margin-bottom: 10px; padding-bottom: 10px;">
-              <h3>EV3 Rubik's Cube Solver
-              </h3>
-              <p>
-                
-
-                The "EV3 2x2 Rubik’s Cuber Solver" project aimed to create a user-friendly robot capable of autonomously solving a 2x2 Rubik’s cube using Lego EV3 interfacing. Motivated by the challenge and complexity of the Rubik’s cube, the group established project objectives focusing on time efficiency, automation, and compact design during the need analysis stage. Engineering specifications were outlined to ensure the robot's performance aligned with these objectives. Through the design phase, various concepts were considered, leading to a final design featuring a gripper claw mechanism, color sensor, and pre-programmed algorithms for efficient cube manipulation. The mechanical design incorporated a rotating baseplate, cube-grabbing arm, and strategically positioned sensors for cube scanning. Fabrication processes were utilized to produce necessary components. Overall, the project demonstrated effective collaboration, problem-solving, and technical skills, albeit with room for future improvements such as enhancing file I/O through coding language alterations and refining mechanical components for increased efficiency and accuracy.                </p>
-            </div>
-            <div class="about-box2" style="margin-bottom: 5px; padding-bottom: 5px;">
-    <p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p>
-  
-    <p><b>Developed by:</b> <a href="johnchoi.html"><b>Jeongyun Choi, </b></a><b>Evan McIntyre, Tanay Mehta, Edam Jin</b></p>
-            </div>
-            <div class="about-box" style="margin-bottom: 10px;">
-              <a href="rubix.html">View Project</a>
-            </div>
-          </div>
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 padding_rl" style="padding-top: 5px;">
-            <div class="about-box_img">
-              <figure><img src="images/rubixcube1.jpg" alt="#" style="width:98%; height:auto;" /></figure>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-
-
-
-    <div id="about" class="about">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-            <div class="about-box" style="margin-bottom: 10px; padding-bottom: 10px;">
-              <h3>Seismic Sensor + Building Destruction Demo Model</h3>
-              <p>
-                Led by Jeongyun Choi, Ethan Gomes, and Henry Ho from the University of Waterloo, this project aims to create an immersive earthquake simulation model with a $2,000 budget. The focus is on two key elements: a realistic seismic wave-generating platform and an innovative auto-recovery building. The engineering specifications include using the equivalent circuit method (ECM) for vibration production and incorporating non-linear movement for lifelike seismic waves. The auto-recovery building utilizes lightweight wood, sustainable materials, and elastic strings for efficient rebuilding. The design process involves material selection, conceptual design, structural analysis, prototype development, refinement, and documentation. The goal is to deliver a cost-effective and educational earthquake simulation experience. 
-                <br><p>&nbsp;</p>Note: This project is still in progress. Please feel free to check other completed projects below!</p>
-            </div>
-            <div class="about-box2" style="margin-bottom: 5px; padding-bottom: 5px;">
-    <p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p>
-  
-               <p><b>Developed by:</b> <a href="johnchoi.html"><b>Jeongyun Choi, </b></a><a href="ethangomes.html"><b>Ethan Gomes, </b></a><a href="henryho.html"><b>Henry Ho </b></a><b>Quitze Bracho-Maganda
-              </b></p>
-            </div>
-
-          </div>
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 padding_rl" style="padding-top: 5px;">
-            <div class="about-box_img">
-              <figure><img src="images/earthquake.png" alt="#" style="width:98%; height:auto;" /></figure>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-   
-    <div id="about" class="about">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-            <div class="about-box" style="margin-bottom: 10px; padding-bottom: 10px;">
-              <h3>SPECIALIZED PNEUMATIC SYSTEM FOR ROBOTS</h3>
-              <p>This research/production explores the development of a custom pneumatic tank, specifically designed to conform to the size limitations of a robot, designed for the “Over and Under” competition hosted by VEX Robotics. The research primarily focuses on utilizing Acrylonitrile Butadiene Styrene (ABS) due to its robustness and suitability for high-pressure applications. Background analysis reveals the necessity for a bespoke <b>pneumatic solution to meet the unique operational demands of the robot,</b> particularly in environments where traditional pneumatic tanks fail to deliver due to size constraints. The methodology en-compasses a comprehensive design and fabrication process, enabling advanced modeling techniques to optimize the tank's structure while ensuring its compatibility with the robot's dimensions. Detailed testing procedures are shown to evaluate the tank's performance under varying pressures and operational conditions.
-                <br><p>This project is conducted through: <a href="https://www.uwvexu.com/" target="_blank" class="no-background-no-outline2">
-                  <img src="images/uwat.png" width="250" 
-                  height="120" >
-              </a>
-              </p>
-              </p>
-            </div>
-            <div class="about-box2" style="margin-bottom: 5px; padding-bottom: 5px;">
-    <p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p>
-  
-              <p><b>Developed by:</b> <a href="johnchoi.html"><b>Jeongyun Choi, </b></a><b>Leo Xie, Sam Huang</b></p>
-            </div>
-            <div class="about-box" style="margin-bottom: 10px;">
-              <a href="pneumatics.html">View Project</a>
-            </div>
-          </div>
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 padding_rl" style="padding-top: 5px;">
-            <div class="about-box_img">
-              <figure><img src="images/pneumatictank.png" alt="#" style="width:98%; height:auto;" /></figure>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div id="about" class="about">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-            <div class="about-box" style="margin-bottom: 10px; padding-bottom: 10px;">
-              <h3>CNSBC TROPHY DESIGN</h3>
-              <p>The Canadian National Steel Bridge Competition was created 8 years ago by two professors
-                from ÉTS, Dr. Éric Lachance-Tremblay and Dr. Jean-Luc Martel. Throughout history it has
-                been hard to keep track of the past competitors and past winners, leaving the achievements
-                of the past competitors lost in time. <b>The trophy will serve as a history book of the winners of the Canadian National Steel Bridge
-                  Competition starting in 2024</b> as each team will have a plaque with their team name, location
-                and year of the competition engraved in the trophy. If your team wants to leave their mark as
-                the designer of the trophy submit your best design. The winner for best design will be
-                announced during this year’s banquet (May 2024). 
-                
-                <br><p>This project is conducted through: <a href="https://www.uwaterloosteelbridge.com/" target="_blank" class="no-background-no-outline2">
-                  <img src="images/uwsb.png" width="350" 
-                  height="120" >
-              </a>
-              </p>
-              </p>
-            </div>
-            <div class="about-box2" style="margin-bottom: 5px; padding-bottom: 5px;">
-    <p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p>
-  
-              <p><b>Developed by:</b> <a href="johnchoi.html"><b>Jeongyun Choi </b></a></p>
-            </div>
-            <div class="about-box" style="margin-bottom: 10px;">
-              <a href="cnsbctrophy.html">View Project</a>
-            </div>
-          </div>
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 padding_rl" style="padding-top: 5px;">
-            <div class="about-box_img">
-              <figure><img src="images/trophydesign.png" alt="#" style="width:98%; height:auto;" /></figure>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="about" class="about">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-            <div class="about-box" style="margin-bottom: 10px; padding-bottom: 10px;">
-              <h3>MEDICINE TRACKING SOFTWARE</h3>
-              <p>Drawing inspiration from my (Jeongyun Choi) experiences working at a local pharmacy and having a pharmacist as a mother, I've developed a revolutionary medicine tracking software. This user-friendly application is designed to provide real-time updates and precise medication alerts to users. The concept emerged from observing the challenges faced by patients in managing their medication schedules and dosages, a common issue I witnessed firsthand in the pharmacy setting. My mother's insights as a pharmacist further highlighted the necessity for a tool that could simplify this process.<b>The software utilizes advanced algorithms to track medication schedules, sending timely alerts to users about the exact medication they need to take.</b> This not only ensures adherence to prescribed regimens but also minimizes the risk of medication errors. The application's ability to offer real-time updates and personalized medication management plans is a step towards enhancing patient care and promoting better health outcomes.
-                  
-                </p>
-              </p>
-            </div>
-            <div class="about-box2" style="margin-bottom: 5px; padding-bottom: 5px;">
-    <p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p>
-  
-              <p><b>Developed by:</b> <a href="johnchoi.html"><b>Jeongyun Choi </b></a></p>
-            </div>
-            <div class="about-box" style="margin-bottom: 10px;">
-              <a href="medicine.html">View Project</a>
-            </div>
-          </div>
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 padding_rl" style="padding-top: 5px;">
-            <div class="about-box_img">
-              <figure><img src="images/medicine.png" alt="#" style="width:98%; height:auto;" /></figure>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-      
-    <div id="about" class="about">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-            <div class="about-box" style="margin-bottom: 10px; padding-bottom: 10px;">
-              <h3>FRAMING & ELECTRICAL WIRING</h3>
-              <p>The ACE IT and ITA (now called SkilledTradesBC) sponsored project demonstrated a commitment to sustainable living and community service through the construction of a 4-bedroom eco-friendly house, outfitted with state-of-the-art wind turbines and polycrystalline solar panels, intended to donate for the elderly. As part of this six-month construction endeavor, licensed electricians collaborated with a team of apprentice plumbers, carpenters, and drywallers to <b>integrate renewable energy systems effectively.</b> This project not only showcased the seamless integration of advanced energy solutions into residential construction but also emphasized the importance of interdisciplinary teamwork in achieving practical, real-world applications that benefit society.
-                <br><p>This project is sponsored by: <a href="https://skilledtradesbc.ca/" class="no-background-no-outline2">
-                  <img src="images/skilledtradesbclogo.png" width="250" 
-                  height="20" >
-              </a>
-              </p>
-              </p>
-            </div>
-            <div class="about-box2" style="margin-bottom: 5px; padding-bottom: 5px;">
-    <p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p><p class="spacer">&nbsp;</p>  
-  
-              <p><b>Developed by:</b> <a href="johnchoi.html"><b>Jeongyun Choi </b></a></p>
-            </div>
-            <div class="about-box" style="margin-bottom: 10px;">
-              <a href="framing.html">View Project</a>
-            </div>
-          </div>
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 padding_rl" style="padding-top: 5px;">
-            <div class="about-box_img">
-              <figure><img src="images/framing.png" alt="#" style="width:98%; height:auto;" /></figure>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-  <!-- end service section -->
     <!-- info section -->
     <section class="info_section layout_padding">
       <div class="container">
         <div class="row">
           <div class="col-md-3">
             <div class="info-logo">
-              <h2>
-                ClearOne
-              </h2>
-              <p>
-                We make things clear, and unify into one.
-              </p>
+              <h2>ClearOne</h2>
+              <p>We make things clear, and unify into one.</p>
             </div>
           </div>
           <div class="col-md-3">
             <div class="info-nav">
-              <h4>
-                Navigation
-              </h4>
+              <h4>Navigation</h4>
               <ul>
-                <li>
-                  <a href="index.html">
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a href="ourteam.html">
-                    Our Team
-                  </a>
-                </li>
-                <li>
-                  <a href="projects.html">
-                    Projects
-                  </a>
-                </li>
-                <li>
-                  <a href="contact.html">
-                    Contact Us
-                  </a>
-                </li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ourteam.html">Our Team</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
               </ul>
             </div>
           </div>
           <div class="col-md-3">
             <div class="info-contact">
-              <h4>
-                Contact Info
-              </h4>
+              <h4>Contact Info</h4>
               <div class="location">
-                <h6>
-                 Address:
-                </h6>
-                
-                  <img src="images/location.png" alt="">
-                  <span>
-                    200 University Avenue W, Waterloo, ON, N2L 3G1
-                  </span>
-                </a>
+                <h6>Address:</h6>
+                <img src="images/location.png" alt="">
+                <span>200 University Avenue W, Waterloo, ON, N2L 3G1</span>
               </div>
               <div class="call">
-                <h6>
-                  Call:
-                </h6>
-                
-                  <img src="images/telephone.png" alt="">
-                  <span>
-                    (+1 778 222 7753)
-                  </span>
-                </a>
+                <h6>Call:</h6>
+                <img src="images/telephone.png" alt="">
+                <span>(+1 778 222 7753)</span>
               </div>
             </div>
           </div>
           <div class="col-md-3">
             <div class="discover">
-              <h4>
-                Discover
-              </h4>
-              
+              <h4>Discover</h4>
               <div class="social-box">
                 <a href="https://www.instagram.com/clearone_innovators/" target="_blank">
-                  <img src="images/instagram2.png" 
-                  width="40" 
-                  height="40" alt="instagram">
+                  <img src="images/instagram2.png" width="40" height="40" alt="instagram">
                 </a>
-           
               </div>
             </div>
           </div>
@@ -471,28 +324,19 @@
       </div>
     </section>
 
-
-
-    <!-- end info_section -->
-
-    <!-- footer section -->
+    <!-- footer -->
     <section class="container-fluid footer_section">
       <p>
         Copyright &copy; 2023-2024 All Rights Reserved By
-        <a href="johnchoi.html"><b>Jeongyun (John) Choi</b></a>
+        <a href="johnchoi.html"><b>Jeongyun  (John) Choi</b></a>
       </p>
     </section>
-    <!-- footer section -->
+  </div>
 
-    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.9/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.9/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- scripts (single set, no duplicates) -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.9/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-</body>
-
 </html>
