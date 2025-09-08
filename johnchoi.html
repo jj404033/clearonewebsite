@@ -20,6 +20,17 @@
 
   <style>
     body { font-family: 'Roboto', sans-serif; }
+   /* Projects grid (similar to your projects page) */
+    .projects-grid .card {
+      border:0; border-radius:1rem; overflow:hidden;
+      box-shadow:0 10px 22px rgba(0,0,0,.06);
+      transition:transform .2s ease, box-shadow .2s ease;
+    }
+    .projects-grid .card:hover { transform:translateY(-4px); box-shadow:0 16px 32px rgba(0,0,0,.11); }
+    .projects-grid .card-img-top { height:180px; object-fit:cover; }
+    .projects-grid .card-title { font-size:1.05rem; font-weight:800; margin-bottom:.25rem; }
+    .projects-grid .byline { font-size:.9rem; color:#6b7280; margin-bottom:.75rem; }
+    .projects-grid .btn { border-radius:.75rem; padding:.5rem .9rem; }
 
     /* NAV resume button */
     .btn-resume { border-radius:.5rem; padding:.45rem .9rem; font-weight:600; }
@@ -147,15 +158,102 @@
         <div class="col-lg-7">
           <h3 class="mb-4">Electrician & Mechanical Engineering Student</h3>
           <p>
-            John is a third-year mechanical engineering student at the University of Waterloo, with a certification as an industrial/construction electrician. He developed his skills at Ozz Electric, where he gained substantial practical experience in electrical work. His professional experience includes analyzing Invitation for Construction (IFC) and tender drawings, and participating in construction projects like
-            <a href="https://www.matcon.ca/project/tower-3-brentwood-mall" target="_blank">Brentwood Tower 3 & 4.</a>
-            Additionally, John was involved in the building and design of a modern house, acquiring knowledge in standard house framing, overhead service installation, solar panel and wind turbine setups, as well as general wiring tasks. As a founding member of ClearOne Innovators, he aims to be involved in collaborative projects, improve the website, and acquire valuable experience for his future endeavors.
+<p>
+  I’m a third-year Mechanical Engineering student at the University of Waterloo and a certified industrial/construction electrician. I got my start with Ozz Electric, working on wiring, solar and wind installs, and major builds like 
+  <a href="https://www.matcon.ca/project/tower-3-brentwood-mall" target="_blank">Brentwood Tower 3 & 4</a>. From there, I branched out into mechanical design and software, building up about a year of hands-on experience in each area — from testing motors and VFD systems, to CAD/FEA modeling, to Python/MATLAB automation and AI tools. I’ve also worked on residential builds, picked up skills in framing and overhead service, and joined student teams like Baja SAE to keep pushing my design skills.
+</p>
+
           </p>
         </div>
       </div>
     </div>
   </section>
+  <!-- PROJECTS (near top) -->
+  <section class="container py-4" id="projects">
+    <div class="section-header">
+      <h2>Projects</h2>
+      <p>A quick look at what I’ve built and tested.</p>
+    </div>
 
+    <div class="row projects-grid">
+      <!-- VFD Motor -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex">
+        <div class="card w-100 h-100">
+          <img src="images/wegmotorvfd.png" class="card-img-top" alt="WEG VFD Motor">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">VFD-Optimized Motor</h5>
+            <div class="byline">CAD + validation</div>
+            <a href="wegmotor.html" class="btn btn-primary mt-auto">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rubik’s Solver -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex">
+        <div class="card w-100 h-100">
+          <img src="images/rubixcube1.jpg" class="card-img-top" alt="Rubik's Cube Solver">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Rubik’s Cube Solver</h5>
+            <div class="byline">Controls + mechatronics</div>
+            <a href="rubix.html" class="btn btn-primary mt-auto">View Project</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Pneumatics -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex">
+        <div class="card w-100 h-100">
+          <img src="images/pneumatictank.png" class="card-img-top" alt="Robotics Pneumatic System">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Robotics Pneumatic System</h5>
+            <div class="byline">Fabrication + testing</div>
+            <a href="pneumatics.html" class="btn btn-primary mt-auto">View Project</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- ABB Water-cooled Motor -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex">
+        <div class="card w-100 h-100">
+          <img src="images/framing.jpg" class="card-img-top" alt="Framing & Electrical Wiring">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">A House from Scratch</h5>
+            <div class="byline">Electrical + structural</div>
+            <a href="framing.html" class="btn btn-primary mt-auto">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CNSBC Trophy -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex">
+        <div class="card w-100 h-100">
+          <img src="images/trophydesign.png" class="card-img-top" alt="CNSBC Trophy">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">CNSBC Trophy Design</h5>
+            <div class="byline">CAD + manufacturing</div>
+            <a href="cnsbctrophy.html" class="btn btn-primary mt-auto">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Medicine App -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex">
+        <div class="card w-100 h-100">
+          <img src="images/medicine.png" class="card-img-top" alt="Medicine Tracker">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Medicine Tracker</h5>
+            <div class="byline">Software tooling</div>
+            <a href="medicine.html" class="btn btn-primary mt-auto">View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <a class="btn btn-outline-primary" href="projects.html">See all projects</a>
+    </div>
+  </section>
   <!-- EDUCATION -->
   <section class="container py-4 edu-section" id="education">
     <h3 class="mb-3">Education</h3>
