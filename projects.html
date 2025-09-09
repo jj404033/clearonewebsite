@@ -26,6 +26,35 @@
   <link href="css/custom.css" rel="stylesheet" />
 
   <style>
+.profile-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color .2s ease;
+}
+
+.profile-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.profile-link .click-me {
+  font-size: 1.0rem;
+  font-style: italic;
+  margin-left: 6px;
+  color: #FF0000; /* subtle gray */
+}
+
+.profile-link .click-me i {
+  font-size: 0.6rem; /* tiny arrow */
+  margin-right: 2px;
+}
+
+.profile-link:hover .click-me {
+  color: #0056b3; /* highlight on hover */
+}
+
+
     /* Clean card grid */
     .projects-grid .card {
       border: 0;
@@ -137,7 +166,15 @@
               <img src="images/wegmotorvfd.png" class="card-img-top" alt="WEG VFD Motor">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title">VFD-Optimized Motor</h5>
-                <div class="byline">By <a href="johnchoi.html">John Choi</a></div>
+                <div class="byline">
+  By <a href="johnchoi.html" class="profile-link">
+  John Choi <span class="click-me"><i class="fas fa-arrow-right"></i> <- Click me</span>
+</a>
+
+</a>
+
+</a>
+</a></div>
                 <a href="wegmotor.html" class="btn btn-primary mt-auto">View Project</a>
               </div>
             </div>
@@ -338,5 +375,15 @@
   <script src="js/bootstrap.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.9/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
 </body>
+
 </html>
+By <a href="johnchoi.html" class="profile-link" data-toggle="tooltip" title="Click me">
+  John Choi <i class="fas fa-arrow-right"></i>
+</a>
