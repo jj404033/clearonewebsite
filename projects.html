@@ -106,6 +106,18 @@
       color: #6c757d;
       margin-bottom: 0;
     }
+    /* Custom button background color */
+.btn-primary {
+  background-color: #f90455; /* Green, or any color you like */
+  border-color: #f90455;
+}
+
+/* Hover effect for button */
+.btn-primary:hover {
+  background-color: #006ab6; /* Darker green when hovered */
+  border-color: #006ab6;
+}
+
 
     /* Fix navbar toggler icon visibility with Bootstrap 4 */
     .custom_nav-container.navbar.navbar-expand-lg .navbar-toggler {
@@ -159,27 +171,54 @@
 
         <div class="row projects-grid">
           <!-- ROW 1: Robotics & Mech/Electrical -->
+
+                    <!-- EV3 Rubik’s Cube Solver -->
+<div class="col-12 col-md-6 col-lg-4 mb-4 d-flex">
+  <div class="card w-100 h-100">
+    <img src="images/lekoprototype.png" class="card-img-top" alt="EV3 Rubik’s Cube Solver">
+    <div class="card-body d-flex flex-column">
+      <h5 class="card-title">LeKo: LEGO-building AI Robot</h5>
+      <div class="byline">
+        By <a href="johnchoi.html" target="_blank">John Choi</a>, 
+        <a href="https://www.linkedin.com/in/jay-chung-2a1847297/" target="_blank">Jay Chung</a>, 
+        <a href="https://www.linkedin.com/in/daehwan1234/" target="_blank">David Kim</a>
+      </div>
+      <a href="leko.html" class="btn btn-primary mt-auto" target="_blank">View Project (In Progress)</a>
+    </div>
+  </div>
+</div>
+
                      <!-- ROW 2: Motors & Dynamics -->
           <!-- NEW: WEG Motor Project -->
           <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex">
             <div class="card w-100 h-100">
-              <img src="images/wegmotorvfd.png" class="card-img-top" alt="WEG VFD Motor">
+              <img src="images/wegmotorpng.png" class="card-img-top" alt="WEG VFD Motor">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title">VFD-Optimized Motor</h5>
                 <div class="byline">
   By <a href="johnchoi.html" class="profile-link">
-  John Choi <span class="click-me"><i class="fas fa-arrow-right"></i> <- Click me</span>
+  John Choi <span class="click-me"><i class="fas fa-arrow-right"></i></span>
 </a>
 
 </a>
 
 </a>
 </a></div>
-                <a href="wegmotor.html" class="btn btn-primary mt-auto">View Project</a>
+                <a href="wegmotor.html" class="btn btn-primary mt-auto"target="_blank">View Project</a>
               </div>
             </div>
           </div>
-
+          <!-- Framing & Electrical Wiring -->
+          <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex">
+            <div class="card w-100 h-100">
+              <img src="images/framing.png" class="card-img-top" alt="Framing & Electrical Wiring">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">House from Scratch</h5>
+                <div class="byline">By <a href="johnchoi.html">John Choi</a></div>
+                <a href="framing.html" class="btn btn-primary mt-auto"target="_blank">View Project</a>
+              </div>
+            </div>
+          </div>
           <!-- EV3 Rubik’s Cube Solver -->
           <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex">
             <div class="card w-100 h-100">
@@ -187,7 +226,7 @@
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title">Rubik’s Cube Solver</h5>
                 <div class="byline">By <a href="johnchoi.html">John Choi</a>, Evan McIntyre, Tanay Mehta, Edam Jin</div>
-                <a href="rubix.html" class="btn btn-primary mt-auto">View Project</a>
+                <a href="rubix.html" class="btn btn-primary mt-auto"target="_blank">View Project</a>
               </div>
             </div>
           </div>
@@ -199,7 +238,7 @@
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title">Robotics Pneumatic System</h5>
                 <div class="byline">By <a href="johnchoi.html">John Choi</a>, Leo Xie, Sam Huang</div>
-                <a href="pneumatics.html" class="btn btn-primary mt-auto">View Project</a>
+                <a href="pneumatics.html" class="btn btn-primary mt-auto"target="_blank">View Project</a>
               </div>
             </div>
           </div>
@@ -211,10 +250,14 @@
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title">CNSBC Trophy Design</h5>
                 <div class="byline">By <a href="johnchoi.html">John Choi</a></div>
-                <a href="cnsbctrophy.html" class="btn btn-primary mt-auto">View Project</a>
+                <a href="cnsbctrophy.html" class="btn btn-primary mt-auto"target="_blank">View Project</a>
               </div>
             </div>
           </div>
+
+          
+
+
 
 <!-- NEW: ABB Motor Project -->
 <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex">
@@ -230,19 +273,18 @@
   </div>
 </div>
 
-
-
-          <!-- Seismic Sensor + Demo Model -->
+       <!-- Hagey Harmony Homes -->
           <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex">
             <div class="card w-100 h-100">
-              <img src="images/earthquake.png" class="card-img-top" alt="Seismic Sensor + Building Demo">
+              <img src="images/hhh.png" class="card-img-top" alt="Hagey Harmony Homes">
               <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Seismic Sensor + Demo Model</h5>
-                <div class="byline">By <a href="johnchoi.html">John Choi</a>, <a href="ethangomes.html">Ethan Gomes</a>, <a href="henryho.html">Henry Ho</a>, Quitze Bracho-Maganda</div>
-                <a href="#" class="btn btn-primary mt-auto" aria-disabled="true">In Progress</a>
+                <h5 class="card-title">Hagey Harmony Homes</h5>
+                <div class="byline">By <a href="johnchoi.html">John Choi</a>, <a href="ethangomes.html">Ethan Gomes</a>, <a href="henryho.html">Henry Ho</a></div>
+                <a href="hhh.html" class="btn btn-primary mt-auto"target="_blank">View Project</a>
               </div>
             </div>
           </div>
+
 
 
 
@@ -253,35 +295,13 @@
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title">Medicine Tracking Software</h5>
                 <div class="byline">By <a href="johnchoi.html">John Choi</a></div>
-                <a href="medicine.html" class="btn btn-primary mt-auto">View Project</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Framing & Electrical Wiring -->
-          <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex">
-            <div class="card w-100 h-100">
-              <img src="images/framing.png" class="card-img-top" alt="Framing & Electrical Wiring">
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Framing & Electrical Wiring</h5>
-                <div class="byline">By <a href="johnchoi.html">John Choi</a></div>
-                <a href="framing.html" class="btn btn-primary mt-auto">View Project</a>
+                <a href="medicine.html" class="btn btn-primary mt-auto"target="_blank">View Project</a>
               </div>
             </div>
           </div>
 
           <!-- ROW 4: Broader work (kept last) -->
-          <!-- Hagey Harmony Homes -->
-          <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex">
-            <div class="card w-100 h-100">
-              <img src="images/hhh.png" class="card-img-top" alt="Hagey Harmony Homes">
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Hagey Harmony Homes</h5>
-                <div class="byline">By <a href="johnchoi.html">John Choi</a>, <a href="ethangomes.html">Ethan Gomes</a>, <a href="henryho.html">Henry Ho</a></div>
-                <a href="hhh.html" class="btn btn-primary mt-auto">View Project</a>
-              </div>
-            </div>
-          </div>
+   
 
           <!-- Bioretention Physical Model -->
           <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex">
@@ -290,11 +310,21 @@
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title">Bioretention Physical Model</h5>
                 <div class="byline">By <a href="johnchoi.html">John Choi</a>, <a href="ethangomes.html">Ethan Gomes</a>, <a href="henryho.html">Henry Ho</a></div>
-                <a href="bioretention.html" class="btn btn-primary mt-auto">View Project</a>
+                <a href="bioretention.html" class="btn btn-primary mt-auto"target="_blank">View Project</a>
               </div>
             </div>
           </div>
-
+          <!-- Seismic Sensor + Demo Model -->
+          <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex">
+            <div class="card w-100 h-100">
+              <img src="images/earthquake.png" class="card-img-top" alt="Seismic Sensor + Building Demo">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">In Progress (Confidential)</h5>
+                <div class="byline">By <a href="johnchoi.html">John Choi</a>, <a href="ethangomes.html">Ethan Gomes</a>, <a href="henryho.html">Henry Ho</a>, Quitze Bracho-Maganda</div>
+                
+              </div>
+            </div>
+          </div>
           <!-- City of Delta Parking Lot -->
           <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex">
             <div class="card w-100 h-100">
@@ -302,13 +332,15 @@
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title">City of Delta Parking Lot (Approved)</h5>
                 <div class="byline">By <a href="henryho.html">Henry Ho</a></div>
-                <a href="deltaproject.html" class="btn btn-primary mt-auto">View Project</a>
+                <a href="deltaproject.html" class="btn btn-primary mt-auto"target="_blank">View Project</a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </main>
+    
+
     <!-- /Projects Grid -->
 
     <!-- info section -->
